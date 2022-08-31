@@ -1,0 +1,39 @@
+--- 
+title: "STAT 253: Statistical Machine Learning"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    config:
+      sharing:
+        facebook: false
+        twitter: false
+documentclass: book
+link-citations: yes
+github-repo: bryandmartin/253_spring_2022
+description: "This is the class website for Statistical Machine Learning at Macalester College."
+---
+
+# Welcome! {-}
+
+<center>
+<img src="images/blackbox.png" width="300">
+
+[Image source](https://www.maxpixel.net/static/photo/1x/Cardboard-Box-Black-Box-Three-Dimensional-Container-310220.png)
+</center>
+
+<br>
+<br>
+
+This is the class site for Statistical Machine Learning (STAT 253) at Macalester College for Spring 2022. The content here was made by [Bryan Martin](https://bryandmartin.github.io) and draws upon our class textbook, the 2nd edition of [An Introduction to Statistical Learning with Applications in R](https://www.statlearning.com/), and on materials prepared by [Brianna Heggeseth](https://bcheggeseth.github.io), [Alicia Johnson](https://ajohns24.github.io), and [Leslie Myint](https://lmyint.github.io).
+
+
+
+
+
+<br>
+<br>
+<br>
+
+![](images/cc_license_button.png)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
