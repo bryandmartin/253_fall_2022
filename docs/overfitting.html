@@ -288,45 +288,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Each tool has been developed separately and coded in a unique way. In order to facilitate and streamline the user experience, there have been attempts at creating a uniform interface, such as the <code>caret</code> R package. The developers of the <code>caret</code> package are no longer maintaining those packages. They are working on a newer package, called <code>tidymodels</code>.</p>
 <p>In this class, we will use the <code>tidymodels</code> package, which uses the tidyverse syntax you learned in Stat 155. The <code>tidymodels</code> package is a relatively new package and continues to be developed as we speak. This means that I’m learning with you and in a month or two, there may be improved functionality.</p>
 <p>As I introduced in the R code videos, we have a general workflow structure that includes a model specification and a recipe (formula + preprocessing steps).</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="overfitting.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the package</span></span>
-<span id="cb84-2"><a href="overfitting.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb84-3"><a href="overfitting.html#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
-<span id="cb84-4"><a href="overfitting.html#cb84-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb84-5"><a href="overfitting.html#cb84-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the seed for the random number generator</span></span>
-<span id="cb84-6"><a href="overfitting.html#cb84-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb84-7"><a href="overfitting.html#cb84-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb84-8"><a href="overfitting.html#cb84-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify Model</span></span>
-<span id="cb84-9"><a href="overfitting.html#cb84-9" aria-hidden="true" tabindex="-1"></a>model_spec <span class="ot">&lt;-</span></span>
-<span id="cb84-10"><a href="overfitting.html#cb84-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> <span class="co"># type of model</span></span>
-<span id="cb84-11"><a href="overfitting.html#cb84-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> __) <span class="sc">%&gt;%</span> <span class="co"># algorithm to fit the model</span></span>
-<span id="cb84-12"><a href="overfitting.html#cb84-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_args</span>(__) <span class="sc">%&gt;%</span> <span class="co"># hyperparameters/tuning parameters are needed for some models</span></span>
-<span id="cb84-13"><a href="overfitting.html#cb84-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(__) <span class="co"># regression or classification</span></span>
-<span id="cb84-14"><a href="overfitting.html#cb84-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb84-15"><a href="overfitting.html#cb84-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify Recipe (if you have preprocessing steps)</span></span>
-<span id="cb84-16"><a href="overfitting.html#cb84-16" aria-hidden="true" tabindex="-1"></a>rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(formula, data) <span class="sc">%&gt;%</span></span>
-<span id="cb84-17"><a href="overfitting.html#cb84-17" aria-hidden="true" tabindex="-1"></a>  step_{FILLIN}() <span class="sc">%&gt;%</span></span>
-<span id="cb84-18"><a href="overfitting.html#cb84-18" aria-hidden="true" tabindex="-1"></a>  step_{FILLIN}() </span>
-<span id="cb84-19"><a href="overfitting.html#cb84-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb84-20"><a href="overfitting.html#cb84-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Workflow (Model + Recipe)</span></span>
-<span id="cb84-21"><a href="overfitting.html#cb84-21" aria-hidden="true" tabindex="-1"></a>model_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb84-22"><a href="overfitting.html#cb84-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(rec) <span class="sc">%&gt;%</span> <span class="co">#or add_formula()</span></span>
-<span id="cb84-23"><a href="overfitting.html#cb84-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model_spec)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="overfitting.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the package</span></span>
+<span id="cb93-2"><a href="overfitting.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb93-3"><a href="overfitting.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
+<span id="cb93-4"><a href="overfitting.html#cb93-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-5"><a href="overfitting.html#cb93-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the seed for the random number generator</span></span>
+<span id="cb93-6"><a href="overfitting.html#cb93-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb93-7"><a href="overfitting.html#cb93-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-8"><a href="overfitting.html#cb93-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify Model</span></span>
+<span id="cb93-9"><a href="overfitting.html#cb93-9" aria-hidden="true" tabindex="-1"></a>model_spec <span class="ot">&lt;-</span></span>
+<span id="cb93-10"><a href="overfitting.html#cb93-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> <span class="co"># type of model</span></span>
+<span id="cb93-11"><a href="overfitting.html#cb93-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> __) <span class="sc">%&gt;%</span> <span class="co"># algorithm to fit the model</span></span>
+<span id="cb93-12"><a href="overfitting.html#cb93-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_args</span>(__) <span class="sc">%&gt;%</span> <span class="co"># hyperparameters/tuning parameters are needed for some models</span></span>
+<span id="cb93-13"><a href="overfitting.html#cb93-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(__) <span class="co"># regression or classification</span></span>
+<span id="cb93-14"><a href="overfitting.html#cb93-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb93-15"><a href="overfitting.html#cb93-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify Recipe (if you have preprocessing steps)</span></span>
+<span id="cb93-16"><a href="overfitting.html#cb93-16" aria-hidden="true" tabindex="-1"></a>rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(formula, data) <span class="sc">%&gt;%</span></span>
+<span id="cb93-17"><a href="overfitting.html#cb93-17" aria-hidden="true" tabindex="-1"></a>  step_{FILLIN}() <span class="sc">%&gt;%</span></span>
+<span id="cb93-18"><a href="overfitting.html#cb93-18" aria-hidden="true" tabindex="-1"></a>  step_{FILLIN}() </span>
+<span id="cb93-19"><a href="overfitting.html#cb93-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-20"><a href="overfitting.html#cb93-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Workflow (Model + Recipe)</span></span>
+<span id="cb93-21"><a href="overfitting.html#cb93-21" aria-hidden="true" tabindex="-1"></a>model_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb93-22"><a href="overfitting.html#cb93-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(rec) <span class="sc">%&gt;%</span> <span class="co">#or add_formula()</span></span>
+<span id="cb93-23"><a href="overfitting.html#cb93-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model_spec)</span></code></pre></div>
 <p>We can fit that workflow to training data.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="overfitting.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model to training data (without a recipe)</span></span>
-<span id="cb85-2"><a href="overfitting.html#cb85-2" aria-hidden="true" tabindex="-1"></a>fit_model <span class="ot">&lt;-</span> <span class="fu">fit</span>(model_spec, formula, data_train)</span>
-<span id="cb85-3"><a href="overfitting.html#cb85-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb85-4"><a href="overfitting.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model &amp; Recipe to training data</span></span>
-<span id="cb85-5"><a href="overfitting.html#cb85-5" aria-hidden="true" tabindex="-1"></a>fit_model <span class="ot">&lt;-</span> <span class="fu">fit</span>(model_wf, data_train)</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="overfitting.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model to training data (without a recipe)</span></span>
+<span id="cb94-2"><a href="overfitting.html#cb94-2" aria-hidden="true" tabindex="-1"></a>fit_model <span class="ot">&lt;-</span> <span class="fu">fit</span>(model_spec, formula, data_train)</span>
+<span id="cb94-3"><a href="overfitting.html#cb94-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-4"><a href="overfitting.html#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model &amp; Recipe to training data</span></span>
+<span id="cb94-5"><a href="overfitting.html#cb94-5" aria-hidden="true" tabindex="-1"></a>fit_model <span class="ot">&lt;-</span> <span class="fu">fit</span>(model_wf, data_train)</span></code></pre></div>
 <p>And then we can evaluate that fit model on testing data (new data that has not been used to fit the model).</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="overfitting.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate on testing data</span></span>
-<span id="cb86-2"><a href="overfitting.html#cb86-2" aria-hidden="true" tabindex="-1"></a>model_output <span class="ot">&lt;-</span> fit_model <span class="sc">%&gt;%</span></span>
-<span id="cb86-3"><a href="overfitting.html#cb86-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(<span class="at">new_data =</span> data_test) <span class="sc">%&gt;%</span> <span class="co"># this function will apply recipe to new_data and do prediction</span></span>
-<span id="cb86-4"><a href="overfitting.html#cb86-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data_test)</span>
-<span id="cb86-5"><a href="overfitting.html#cb86-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb86-6"><a href="overfitting.html#cb86-6" aria-hidden="true" tabindex="-1"></a>reg_metrics <span class="ot">&lt;-</span> <span class="fu">metric_set</span>(rmse, rsq, mae)</span>
-<span id="cb86-7"><a href="overfitting.html#cb86-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-8"><a href="overfitting.html#cb86-8" aria-hidden="true" tabindex="-1"></a>model_output <span class="sc">%&gt;%</span></span>
-<span id="cb86-9"><a href="overfitting.html#cb86-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reg_metrics</span>(<span class="at">truth =</span> __, <span class="at">estimate =</span> .pred)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="overfitting.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate on testing data</span></span>
+<span id="cb95-2"><a href="overfitting.html#cb95-2" aria-hidden="true" tabindex="-1"></a>model_output <span class="ot">&lt;-</span> fit_model <span class="sc">%&gt;%</span></span>
+<span id="cb95-3"><a href="overfitting.html#cb95-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(<span class="at">new_data =</span> data_test) <span class="sc">%&gt;%</span> <span class="co"># this function will apply recipe to new_data and do prediction</span></span>
+<span id="cb95-4"><a href="overfitting.html#cb95-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(data_test)</span>
+<span id="cb95-5"><a href="overfitting.html#cb95-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb95-6"><a href="overfitting.html#cb95-6" aria-hidden="true" tabindex="-1"></a>reg_metrics <span class="ot">&lt;-</span> <span class="fu">metric_set</span>(rmse, rsq, mae)</span>
+<span id="cb95-7"><a href="overfitting.html#cb95-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-8"><a href="overfitting.html#cb95-8" aria-hidden="true" tabindex="-1"></a>model_output <span class="sc">%&gt;%</span></span>
+<span id="cb95-9"><a href="overfitting.html#cb95-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reg_metrics</span>(<span class="at">truth =</span> __, <span class="at">estimate =</span> .pred)</span></code></pre></div>
 <p><br></p>
 <p>The power of <code>tidymodels</code> is that it allows us to streamline the vast world of machine learning techniques into one common syntax. On top of <code>"lm"</code>, there are many other different machine learning methods that we can use.</p>
 <p><br></p>
@@ -358,57 +358,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>wrist</code>: Wrist circumference (cm)</li>
 </ul>
 <p>It takes a lot of effort to estimate body fat percentage accurately through underwater weighing. The goal is to build the best predictive model for <code>fatSiri</code> using just circumference measurements, which are more easily attainable. (We won’t use <code>fatBrozek</code> or <code>density</code> as predictors because they’re other outcome variables.)</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="overfitting.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb87-2"><a href="overfitting.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb87-3"><a href="overfitting.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb87-4"><a href="overfitting.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb87-5"><a href="overfitting.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
-<span id="cb87-6"><a href="overfitting.html#cb87-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-7"><a href="overfitting.html#cb87-7" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/js2gxnazybokbzh/bodyfat_train.csv?dl=1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="overfitting.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb96-2"><a href="overfitting.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb96-3"><a href="overfitting.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb96-4"><a href="overfitting.html#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb96-5"><a href="overfitting.html#cb96-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
+<span id="cb96-6"><a href="overfitting.html#cb96-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-7"><a href="overfitting.html#cb96-7" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/js2gxnazybokbzh/bodyfat_train.csv?dl=1&quot;</span>)</span></code></pre></div>
 <pre><code>## Rows: 80 Columns: 17
-## ── Column specification ─────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
-## dbl (17): fatBrozek, fatSiri, density, age, weight, height, neck, chest, abdomen, hip...
+## dbl (17): fatBrozek, fatSiri, density, age, weight, height, neck, chest, abd...
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="overfitting.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the fatBrozek and density variables (and one variable that a replicate of others)</span></span>
-<span id="cb89-2"><a href="overfitting.html#cb89-2" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> bodyfat_train <span class="sc">%&gt;%</span></span>
-<span id="cb89-3"><a href="overfitting.html#cb89-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>fatBrozek, <span class="sc">-</span>density, <span class="sc">-</span>hipin)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="overfitting.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the fatBrozek and density variables (and one variable that a replicate of others)</span></span>
+<span id="cb98-2"><a href="overfitting.html#cb98-2" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> bodyfat_train <span class="sc">%&gt;%</span></span>
+<span id="cb98-3"><a href="overfitting.html#cb98-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>fatBrozek, <span class="sc">-</span>density, <span class="sc">-</span>hipin)</span></code></pre></div>
 </div>
 <div id="exercise-1-5-models" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 1: 5 models<a href="overfitting.html#exercise-1-5-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Consider the 5 models below:</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="overfitting.html#cb90-1" aria-hidden="true" tabindex="-1"></a>lm_spec <span class="ot">&lt;-</span></span>
-<span id="cb90-2"><a href="overfitting.html#cb90-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb90-3"><a href="overfitting.html#cb90-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> <span class="st">&#39;lm&#39;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb90-4"><a href="overfitting.html#cb90-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">&#39;regression&#39;</span>)</span>
-<span id="cb90-5"><a href="overfitting.html#cb90-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-6"><a href="overfitting.html#cb90-6" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb90-7"><a href="overfitting.html#cb90-7" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm, </span>
-<span id="cb90-8"><a href="overfitting.html#cb90-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb90-9"><a href="overfitting.html#cb90-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-10"><a href="overfitting.html#cb90-10" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb90-11"><a href="overfitting.html#cb90-11" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps, </span>
-<span id="cb90-12"><a href="overfitting.html#cb90-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb90-13"><a href="overfitting.html#cb90-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-14"><a href="overfitting.html#cb90-14" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb90-15"><a href="overfitting.html#cb90-15" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps<span class="sc">+</span>chest<span class="sc">+</span>hip, </span>
-<span id="cb90-16"><a href="overfitting.html#cb90-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb90-17"><a href="overfitting.html#cb90-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-18"><a href="overfitting.html#cb90-18" aria-hidden="true" tabindex="-1"></a>mod4 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb90-19"><a href="overfitting.html#cb90-19" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> .,  <span class="co"># The . means all predictors</span></span>
-<span id="cb90-20"><a href="overfitting.html#cb90-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span>
-<span id="cb90-21"><a href="overfitting.html#cb90-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-22"><a href="overfitting.html#cb90-22" aria-hidden="true" tabindex="-1"></a>bf_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(fatSiri <span class="sc">~</span> .,  <span class="at">data =</span> bodyfat_train) <span class="sc">%&gt;%</span></span>
-<span id="cb90-23"><a href="overfitting.html#cb90-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
-<span id="cb90-24"><a href="overfitting.html#cb90-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-25"><a href="overfitting.html#cb90-25" aria-hidden="true" tabindex="-1"></a>bf_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb90-26"><a href="overfitting.html#cb90-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(bf_recipe) <span class="sc">%&gt;%</span></span>
-<span id="cb90-27"><a href="overfitting.html#cb90-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(lm_spec) </span>
-<span id="cb90-28"><a href="overfitting.html#cb90-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-29"><a href="overfitting.html#cb90-29" aria-hidden="true" tabindex="-1"></a>mod5 <span class="ot">&lt;-</span> <span class="fu">fit</span>(bf_wf,</span>
-<span id="cb90-30"><a href="overfitting.html#cb90-30" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="overfitting.html#cb99-1" aria-hidden="true" tabindex="-1"></a>lm_spec <span class="ot">&lt;-</span></span>
+<span id="cb99-2"><a href="overfitting.html#cb99-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb99-3"><a href="overfitting.html#cb99-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> <span class="st">&#39;lm&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb99-4"><a href="overfitting.html#cb99-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">&#39;regression&#39;</span>)</span>
+<span id="cb99-5"><a href="overfitting.html#cb99-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-6"><a href="overfitting.html#cb99-6" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb99-7"><a href="overfitting.html#cb99-7" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm, </span>
+<span id="cb99-8"><a href="overfitting.html#cb99-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb99-9"><a href="overfitting.html#cb99-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-10"><a href="overfitting.html#cb99-10" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb99-11"><a href="overfitting.html#cb99-11" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps, </span>
+<span id="cb99-12"><a href="overfitting.html#cb99-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb99-13"><a href="overfitting.html#cb99-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-14"><a href="overfitting.html#cb99-14" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb99-15"><a href="overfitting.html#cb99-15" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps<span class="sc">+</span>chest<span class="sc">+</span>hip, </span>
+<span id="cb99-16"><a href="overfitting.html#cb99-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb99-17"><a href="overfitting.html#cb99-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-18"><a href="overfitting.html#cb99-18" aria-hidden="true" tabindex="-1"></a>mod4 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb99-19"><a href="overfitting.html#cb99-19" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> .,  <span class="co"># The . means all predictors</span></span>
+<span id="cb99-20"><a href="overfitting.html#cb99-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span>
+<span id="cb99-21"><a href="overfitting.html#cb99-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-22"><a href="overfitting.html#cb99-22" aria-hidden="true" tabindex="-1"></a>bf_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(fatSiri <span class="sc">~</span> .,  <span class="at">data =</span> bodyfat_train) <span class="sc">%&gt;%</span></span>
+<span id="cb99-23"><a href="overfitting.html#cb99-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
+<span id="cb99-24"><a href="overfitting.html#cb99-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-25"><a href="overfitting.html#cb99-25" aria-hidden="true" tabindex="-1"></a>bf_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb99-26"><a href="overfitting.html#cb99-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(bf_recipe) <span class="sc">%&gt;%</span></span>
+<span id="cb99-27"><a href="overfitting.html#cb99-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(lm_spec) </span>
+<span id="cb99-28"><a href="overfitting.html#cb99-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-29"><a href="overfitting.html#cb99-29" aria-hidden="true" tabindex="-1"></a>mod5 <span class="ot">&lt;-</span> <span class="fu">fit</span>(bf_wf,</span>
+<span id="cb99-30"><a href="overfitting.html#cb99-30" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span></code></pre></div>
 <ol style="list-style-type: lower-alpha">
 <li><p><strong>STAT 155 review:</strong> Look at the <code>tidy()</code> of <code>mod1</code>. Contextually interpret the coefficient for the weight predictor. Is anything surprising? Why might this be?</p></li>
 <li><p>Explain how mod5 is different than mod4. You may want to look at <code>bf_recipe %&gt;% prep(bodyfat_train) %&gt;% juice()</code> to see the preprocessed training data.</p></li>
@@ -423,38 +423,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: lower-alpha">
 <li>Sequentially run the code below, ending before pipe, comma, or +. For each row of code below, discuss what it does. Add comments to the end of the line after the pipe (with # in front) to explain what each line does.</li>
 </ol>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="overfitting.html#cb91-1" aria-hidden="true" tabindex="-1"></a>mod5 <span class="sc">%&gt;%</span> <span class="co">#comment here</span></span>
-<span id="cb91-2"><a href="overfitting.html#cb91-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="co">#</span></span>
-<span id="cb91-3"><a href="overfitting.html#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
-<span id="cb91-4"><a href="overfitting.html#cb91-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lower =</span> estimate <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span>std.error, <span class="at">upper =</span> estimate <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span>std.error) <span class="sc">%&gt;%</span> <span class="co">#</span></span>
-<span id="cb91-5"><a href="overfitting.html#cb91-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb91-6"><a href="overfitting.html#cb91-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>, <span class="at">linetype=</span><span class="dv">4</span>) <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb91-7"><a href="overfitting.html#cb91-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>estimate, <span class="at">y=</span>term)) <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb91-8"><a href="overfitting.html#cb91-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">y=</span>term, <span class="at">yend=</span>term, <span class="at">x=</span>lower, <span class="at">xend=</span>upper), <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">ends=</span><span class="st">&#39;both&#39;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">&#39;cm&#39;</span>))) <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb91-9"><a href="overfitting.html#cb91-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Coefficient estimate (95% CI)&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Feature&#39;</span>) <span class="sc">+</span>  <span class="co">#</span></span>
-<span id="cb91-10"><a href="overfitting.html#cb91-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="co">#</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="overfitting.html#cb100-1" aria-hidden="true" tabindex="-1"></a>mod5 <span class="sc">%&gt;%</span> <span class="co">#comment here</span></span>
+<span id="cb100-2"><a href="overfitting.html#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="co">#</span></span>
+<span id="cb100-3"><a href="overfitting.html#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
+<span id="cb100-4"><a href="overfitting.html#cb100-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lower =</span> estimate <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span>std.error, <span class="at">upper =</span> estimate <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span>std.error) <span class="sc">%&gt;%</span> <span class="co">#</span></span>
+<span id="cb100-5"><a href="overfitting.html#cb100-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb100-6"><a href="overfitting.html#cb100-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>, <span class="at">linetype=</span><span class="dv">4</span>) <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb100-7"><a href="overfitting.html#cb100-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>estimate, <span class="at">y=</span>term)) <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb100-8"><a href="overfitting.html#cb100-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">y=</span>term, <span class="at">yend=</span>term, <span class="at">x=</span>lower, <span class="at">xend=</span>upper), <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">ends=</span><span class="st">&#39;both&#39;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">&#39;cm&#39;</span>))) <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb100-9"><a href="overfitting.html#cb100-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Coefficient estimate (95% CI)&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Feature&#39;</span>) <span class="sc">+</span>  <span class="co">#</span></span>
+<span id="cb100-10"><a href="overfitting.html#cb100-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="co">#</span></span></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Sequentially run each line of code (below), end before pipe or comma. For each row of code below, discuss what it does. Add comments to the end of the line after the pipe (with # in front) to explain what each line does.</li>
 </ol>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="overfitting.html#cb92-1" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="sc">%&gt;%</span> <span class="co"># </span></span>
-<span id="cb92-2"><a href="overfitting.html#cb92-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
-<span id="cb92-3"><a href="overfitting.html#cb92-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span><span class="fu">c</span>(fatSiri, id), <span class="at">names_to =</span> <span class="st">&#39;key&#39;</span>, <span class="at">values_to =</span> <span class="st">&#39;value&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
-<span id="cb92-4"><a href="overfitting.html#cb92-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(  <span class="co"># </span></span>
-<span id="cb92-5"><a href="overfitting.html#cb92-5" aria-hidden="true" tabindex="-1"></a>    (mod4 <span class="sc">%&gt;%</span>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(term, estimate)), <span class="co"># </span></span>
-<span id="cb92-6"><a href="overfitting.html#cb92-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&#39;key&#39;</span><span class="ot">=</span><span class="st">&#39;term&#39;</span>)</span>
-<span id="cb92-7"><a href="overfitting.html#cb92-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> <span class="co">#right_join finishes here</span></span>
-<span id="cb92-8"><a href="overfitting.html#cb92-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">effect =</span> value <span class="sc">*</span> estimate) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
-<span id="cb92-9"><a href="overfitting.html#cb92-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">y =</span> key)) <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb92-10"><a href="overfitting.html#cb92-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb92-11"><a href="overfitting.html#cb92-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">&#39;grey&#39;</span>) <span class="sc">+</span> <span class="co"># </span></span>
-<span id="cb92-12"><a href="overfitting.html#cb92-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Effect/Contribution to Predicted BodyFat Percent&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Feature&#39;</span>) <span class="sc">+</span>  <span class="co"># </span></span>
-<span id="cb92-13"><a href="overfitting.html#cb92-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="co">#</span></span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="overfitting.html#cb101-1" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="sc">%&gt;%</span> <span class="co"># </span></span>
+<span id="cb101-2"><a href="overfitting.html#cb101-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
+<span id="cb101-3"><a href="overfitting.html#cb101-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span><span class="fu">c</span>(fatSiri, id), <span class="at">names_to =</span> <span class="st">&#39;key&#39;</span>, <span class="at">values_to =</span> <span class="st">&#39;value&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
+<span id="cb101-4"><a href="overfitting.html#cb101-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(  <span class="co"># </span></span>
+<span id="cb101-5"><a href="overfitting.html#cb101-5" aria-hidden="true" tabindex="-1"></a>    (mod4 <span class="sc">%&gt;%</span>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(term, estimate)), <span class="co"># </span></span>
+<span id="cb101-6"><a href="overfitting.html#cb101-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&#39;key&#39;</span><span class="ot">=</span><span class="st">&#39;term&#39;</span>)</span>
+<span id="cb101-7"><a href="overfitting.html#cb101-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> <span class="co">#right_join finishes here</span></span>
+<span id="cb101-8"><a href="overfitting.html#cb101-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">effect =</span> value <span class="sc">*</span> estimate) <span class="sc">%&gt;%</span> <span class="co"># </span></span>
+<span id="cb101-9"><a href="overfitting.html#cb101-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">y =</span> key)) <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb101-10"><a href="overfitting.html#cb101-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb101-11"><a href="overfitting.html#cb101-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">&#39;grey&#39;</span>) <span class="sc">+</span> <span class="co"># </span></span>
+<span id="cb101-12"><a href="overfitting.html#cb101-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Effect/Contribution to Predicted BodyFat Percent&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Feature&#39;</span>) <span class="sc">+</span>  <span class="co"># </span></span>
+<span id="cb101-13"><a href="overfitting.html#cb101-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="co">#</span></span></code></pre></div>
 </div>
 <div id="exercise-3-evaluating-on-test-data" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 3: Evaluating on Test Data<a href="overfitting.html#exercise-3-evaluating-on-test-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that you’ve thought about how well the models might perform on test data, deploy it in the real world by applying it to a new set of 172 adult males. You’ll need to update the <code>new_data</code> to use <code>bodyfat_test</code> instead of <code>bodyfat_train</code>.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="overfitting.html#cb93-1" aria-hidden="true" tabindex="-1"></a>bodyfat_test <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/7gizws208u0oywq/bodyfat_test.csv?dl=1&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="overfitting.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use fit/trained models and evaluate on test data</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="overfitting.html#cb102-1" aria-hidden="true" tabindex="-1"></a>bodyfat_test <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/7gizws208u0oywq/bodyfat_test.csv?dl=1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="overfitting.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use fit/trained models and evaluate on test data</span></span></code></pre></div>
 <ol style="list-style-type: lower-alpha">
 <li><p>Calculate the test RMSE, MAE, and R squared for all five of the models.</p></li>
 <li><p>Look back to Exercise 1 and see which model you thought was “best” based on the training data. Is that the “best” model in terms of predicting on new data? Explain.</p></li>
@@ -464,16 +464,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="exercise-4-overfitting" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 4: Overfitting<a href="overfitting.html#exercise-4-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you have time, consider the following relationship. Imagine a set of predictions that is overfit to this training data. You are not limited to lines. Draw a picture of that function of predictions on a piece of paper.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="overfitting.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb95-2"><a href="overfitting.html#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb95-3"><a href="overfitting.html#cb95-3" aria-hidden="true" tabindex="-1"></a>data_train <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb95-4"><a href="overfitting.html#cb95-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">runif</span>(<span class="dv">15</span>,<span class="dv">0</span>,<span class="dv">7</span>),</span>
-<span id="cb95-5"><a href="overfitting.html#cb95-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">15</span>,<span class="at">sd =</span> <span class="dv">7</span>)</span>
-<span id="cb95-6"><a href="overfitting.html#cb95-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb95-7"><a href="overfitting.html#cb95-7" aria-hidden="true" tabindex="-1"></a>data_train <span class="sc">%&gt;%</span></span>
-<span id="cb95-8"><a href="overfitting.html#cb95-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
-<span id="cb95-9"><a href="overfitting.html#cb95-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb95-10"><a href="overfitting.html#cb95-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="overfitting.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb104-2"><a href="overfitting.html#cb104-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-3"><a href="overfitting.html#cb104-3" aria-hidden="true" tabindex="-1"></a>data_train <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb104-4"><a href="overfitting.html#cb104-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">runif</span>(<span class="dv">15</span>,<span class="dv">0</span>,<span class="dv">7</span>),</span>
+<span id="cb104-5"><a href="overfitting.html#cb104-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">15</span>,<span class="at">sd =</span> <span class="dv">7</span>)</span>
+<span id="cb104-6"><a href="overfitting.html#cb104-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb104-7"><a href="overfitting.html#cb104-7" aria-hidden="true" tabindex="-1"></a>data_train <span class="sc">%&gt;%</span></span>
+<span id="cb104-8"><a href="overfitting.html#cb104-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb104-9"><a href="overfitting.html#cb104-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb104-10"><a href="overfitting.html#cb104-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="stat253_manual_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 
 </div>
