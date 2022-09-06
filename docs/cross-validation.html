@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 4 Cross-validation | STAT 253: Statistical Machine Learning</title>
+  <title>Topic4 Cross-validation | STAT 253: Statistical Machine Learning</title>
   <meta name="description" content="This is the class website for Statistical Machine Learning at Macalester College." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 4 Cross-validation | STAT 253: Statistical Machine Learning" />
+  <meta property="og:title" content="Topic4 Cross-validation | STAT 253: Statistical Machine Learning" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   <meta name="github-repo" content="bryandmartin/253_spring_2022" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 4 Cross-validation | STAT 253: Statistical Machine Learning" />
+  <meta name="twitter:title" content="Topic4 Cross-validation | STAT 253: Statistical Machine Learning" />
   
   <meta name="twitter:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="overfitting.html"/>
 <link rel="next" href="variable-subset-selection.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="overfitting.html"><a href="overfitting.html"><i class="fa fa-check"></i><b>3</b> Overfitting</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#learning-goals-2"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="overfitting.html#the-tidymodels-package">The <code>tidymodels</code> package</a></li>
+<li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#the-tidymodels-package"><i class="fa fa-check"></i>The <code>tidymodels</code> package</a></li>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#exercises-1"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#context-1"><i class="fa fa-check"></i>Context</a></li>
@@ -255,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#context-2"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-1-cross-validation-in-concept"><i class="fa fa-check"></i>Exercise 1: Cross-validation in Concept</a></li>
-<li><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels">Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels"><i class="fa fa-check"></i>Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-3-looking-at-the-evaluation-metrics"><i class="fa fa-check"></i>Exercise 3: Looking at the evaluation metrics</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-4-practical-issues-choosing-the-number-of-folds"><i class="fa fa-check"></i>Exercise 4: Practical issues: choosing the number of folds</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#digging-deeper"><i class="fa fa-check"></i>Digging deeper</a></li>
@@ -274,227 +273,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="variable-subset-selection.html"><a href="variable-subset-selection.html#exercise-4-approaches-to-variable-subset-selection"><i class="fa fa-check"></i>Exercise 4: Approaches to variable subset selection</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html"><i class="fa fa-check"></i><b>6</b> LASSO: Shrinkage/Regularization</a>
-<ul>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#learning-goals-5"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#lasso-in-theory"><i class="fa fa-check"></i>LASSO in Theory</a></li>
-<li><a href="lasso-shrinkageregularization.html#lasso-models-in-tidymodels">LASSO models in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercises-4"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-1-a-least-squares-model"><i class="fa fa-check"></i>Exercise 1: A least squares model</a></li>
-<li><a href="lasso-shrinkageregularization.html#exercise-2-fitting-a-lasso-model-in-tidymodels">Exercise 2: Fitting a LASSO model in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-3-examining-output-plot-of-coefficient-paths"><i class="fa fa-check"></i>Exercise 3: Examining output: plot of coefficient paths</a></li>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-4-examining-and-evaluating-the-best-lasso-model"><i class="fa fa-check"></i>Exercise 4: Examining and evaluating the best LASSO model</a></li>
-<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#digging-deeper-1"><i class="fa fa-check"></i>Digging deeper</a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>V Regression: Building Flexible Models</b></span></li>
-<li class="chapter" data-level="7" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html"><i class="fa fa-check"></i><b>7</b> KNN Regression and the Bias-Variance Tradeoff</a>
-<ul>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#learning-goals-6"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#knn-models-in-tidymodels">KNN models in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercises-5"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#hello-how-are-things"><i class="fa fa-check"></i>Hello, how are things?</a></li>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-1-bias-variance-tradeoff-warmup"><i class="fa fa-check"></i>Exercise 1: Bias-variance tradeoff warmup</a></li>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-2-impact-of-variable-scale-and-distance-measure"><i class="fa fa-check"></i>Exercise 2: Impact of variable scale and distance measure</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-3-implementing-knn-in-tidymodels">Exercise 3: Implementing KNN in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-4-inspecting-the-results"><i class="fa fa-check"></i>Exercise 4: Inspecting the results</a></li>
-<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-5-curse-of-dimensionality"><i class="fa fa-check"></i>Exercise 5: Curse of dimensionality</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="catch-up-day.html"><a href="catch-up-day.html"><i class="fa fa-check"></i><b>8</b> Catch up Day</a>
-<ul>
-<li class="chapter" data-level="" data-path="catch-up-day.html"><a href="catch-up-day.html#learning-goals-7"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="catch-up-day.html"><a href="catch-up-day.html#content-conversation-1-prompts"><i class="fa fa-check"></i>Content Conversation 1 Prompts</a></li>
-<li class="chapter" data-level="" data-path="catch-up-day.html"><a href="catch-up-day.html#peer-review"><i class="fa fa-check"></i>Peer Review</a></li>
-<li class="chapter" data-level="" data-path="catch-up-day.html"><a href="catch-up-day.html#project-work"><i class="fa fa-check"></i>Project Work</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="splines.html"><a href="splines.html"><i class="fa fa-check"></i><b>9</b> Splines</a>
-<ul>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#learning-goals-8"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#splines-1"><i class="fa fa-check"></i>Splines</a></li>
-<li><a href="splines.html#splines-in-tidymodels">Splines in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercises-6"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercise-1-evaluating-a-fully-linear-model"><i class="fa fa-check"></i>Exercise 1: Evaluating a fully linear model</a></li>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercise-2-evaluating-a-spline-model"><i class="fa fa-check"></i>Exercise 2: Evaluating a spline model</a></li>
-<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#extra-variable-scaling"><i class="fa fa-check"></i>Extra! Variable scaling</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="local-regression-gams.html"><a href="local-regression-gams.html"><i class="fa fa-check"></i><b>10</b> Local Regression &amp; GAMs</a>
-<ul>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#learning-goals-9"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams"><i class="fa fa-check"></i>GAMs</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams---options-for-fitting"><i class="fa fa-check"></i>GAMs - Options for Fitting</a>
-<ul>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-b-splines-ols"><i class="fa fa-check"></i>GAMs (B-splines + OLS)</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-loess"><i class="fa fa-check"></i>GAMs (LOESS)</a></li>
-<li><a href="local-regression-gams.html#gams-smoothing-splines-in-tidymodels">GAMs (smoothing splines) in <code>tidymodels</code></a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercises-7"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-1-conceptual-warmup"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-2-using-loess"><i class="fa fa-check"></i>Exercise 2: Using LOESS</a></li>
-<li><a href="local-regression-gams.html#exercise-3-building-a-gam-in-tidymodels">Exercise 3: Building a GAM in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-4-adjusting-the-best-gam"><i class="fa fa-check"></i>Exercise 4: Adjusting the “best” GAM</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-5-gam-with-recipes"><i class="fa fa-check"></i>Exercise 5: GAM with recipes</a></li>
-<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-6-comparison-of-methods"><i class="fa fa-check"></i>Exercise 6: Comparison of methods</a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>VI Classification</b></span></li>
-<li class="chapter" data-level="11" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html"><i class="fa fa-check"></i><b>11</b> Logistic Regression &amp; Evaluation</a>
-<ul>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#learning-goals-10"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="logistic-regression-evaluation.html#logistic-regression-in-tidymodels">Logistic regression in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercises-8"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#context-3"><i class="fa fa-check"></i>Context</a></li>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-1-visualization-warmup"><i class="fa fa-check"></i>Exercise 1: Visualization warmup</a></li>
-<li><a href="logistic-regression-evaluation.html#exercise-2-implementing-logistic-regression-in-tidymodels">Exercise 2: Implementing logistic regression in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-3-interpreting-the-model"><i class="fa fa-check"></i>Exercise 3: Interpreting the model</a></li>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-4-making-predictions"><i class="fa fa-check"></i>Exercise 4: Making predictions</a></li>
-<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-5-evaluate-the-model"><i class="fa fa-check"></i>Exercise 5: Evaluate the model</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html"><i class="fa fa-check"></i><b>12</b> Lasso &amp; Logistic Regression</a>
-<ul>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#learning-goals-11"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="lasso-logistic-regression.html#lasso-for-logistic-regression-in-tidymodels">LASSO for logistic regression in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercises-9"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#context-4"><i class="fa fa-check"></i>Context</a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-1-conceptual-warmup-1"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
-<li><a href="lasso-logistic-regression.html#exercise-2-implementing-lasso-logistic-regression-in-tidymodels">Exercise 2: Implementing LASSO logistic regression in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-3-inspecting-the-model"><i class="fa fa-check"></i>Exercise 3: Inspecting the model</a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-4-interpreting-evaluation-metrics"><i class="fa fa-check"></i>Exercise 4: Interpreting evaluation metrics</a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-5-using-the-final-model-choosing-a-threshold"><i class="fa fa-check"></i>Exercise 5: Using the final model (choosing a threshold)</a></li>
-<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-6-algorithmic-understanding-for-evaluation-metrics"><i class="fa fa-check"></i>Exercise 6: Algorithmic understanding for evaluation metrics</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>13</b> Trees</a>
-<ul>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#learning-goals-12"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="trees.html#trees-in-tidymodels">Trees in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercises-10"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#context-5"><i class="fa fa-check"></i>Context</a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-1-core-theme-parametricnonparametric"><i class="fa fa-check"></i>Exercise 1: Core theme: parametric/nonparametric</a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-2-core-theme-tuning-parameters-and-the-bvt"><i class="fa fa-check"></i>Exercise 2: Core theme: Tuning parameters and the BVT</a></li>
-<li><a href="trees.html#exercise-3-building-tuning-trees-in-tidymodels">Exercise 3: Building &amp; tuning trees in <code>tidymodels</code></a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-4-visualizing-trees"><i class="fa fa-check"></i>Exercise 4: Visualizing trees</a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-5-predictions-from-trees"><i class="fa fa-check"></i>Exercise 5: Predictions from trees</a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-6-variable-importance-in-trees"><i class="fa fa-check"></i>Exercise 6: Variable importance in trees</a></li>
-<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#extra-regression-trees"><i class="fa fa-check"></i>Extra! Regression Trees!</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html"><i class="fa fa-check"></i><b>14</b> Bagging and Random Forests</a>
-<ul>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#learning-goals-13"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercises-11"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#hello-how-are-things-1"><i class="fa fa-check"></i>Hello, how are things?</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-1-bagging-bootstrap-aggregation"><i class="fa fa-check"></i>Exercise 1: Bagging: Bootstrap Aggregation</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-2-preparation-to-build-a-random-forest"><i class="fa fa-check"></i>Exercise 2: Preparation to build a random forest</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-3-building-the-random-forest"><i class="fa fa-check"></i>Exercise 3: Building the random forest</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-4-preliminary-interpretation"><i class="fa fa-check"></i>Exercise 4: Preliminary interpretation</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-5-evaluating-the-forest"><i class="fa fa-check"></i>Exercise 5: Evaluating the forest</a></li>
-<li class="chapter" data-level="" data-path="bagging-and-random-forests.html"><a href="bagging-and-random-forests.html#exercise-6-variable-importance-measures"><i class="fa fa-check"></i>Exercise 6: Variable importance measures</a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>VII Unsupervised Learning</b></span></li>
-<li class="chapter" data-level="15" data-path="k-means-clustering.html"><a href="k-means-clustering.html"><i class="fa fa-check"></i><b>15</b> K-Means Clustering</a>
-<ul>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#learning-goals-14"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercises-12"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-1-visual-explorations"><i class="fa fa-check"></i>Exercise 1: Visual explorations</a></li>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-2-k-means-clustering-on-bill-length-and-depth"><i class="fa fa-check"></i>Exercise 2: K-means clustering on bill length and depth</a></li>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-3-addressing-variable-scale"><i class="fa fa-check"></i>Exercise 3: Addressing variable scale</a></li>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-4-clustering-on-more-variables"><i class="fa fa-check"></i>Exercise 4: Clustering on more variables</a></li>
-<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-5-interpreting-the-clusters"><i class="fa fa-check"></i>Exercise 5: Interpreting the clusters</a></li>
-<li><a href="k-means-clustering.html#exercise-6-picking-k">Exercise 6: Picking <span class="math inline">\(k\)</span></a></li>
-<li><a href="k-means-clustering.html#go-deeper-picking-k">Go Deeper: Picking <span class="math inline">\(k\)</span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html"><i class="fa fa-check"></i><b>16</b> Hierarchical Clustering</a>
-<ul>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#learning-goals-15"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercises-13"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercise-1-hierarchical-clustering-by-hand"><i class="fa fa-check"></i>Exercise 1: Hierarchical clustering by hand</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercise-2-exploring-penguin-dendrograms"><i class="fa fa-check"></i>Exercise 2: Exploring penguin dendrograms</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercise-3-interpreting-the-clusters-visually"><i class="fa fa-check"></i>Exercise 3: Interpreting the clusters visually</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercise-4-tree-cutting-and-interpretation"><i class="fa fa-check"></i>Exercise 4: Tree-cutting and interpretation</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#exercise-5-k-means-vs.-hierarchical"><i class="fa fa-check"></i>Exercise 5: K-means vs. hierarchical</a></li>
-<li class="chapter" data-level="" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html#dig-into-dendrograms"><i class="fa fa-check"></i>Dig into Dendrograms</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="catch-up-clustering-day.html"><a href="catch-up-clustering-day.html"><i class="fa fa-check"></i><b>17</b> Catch up Clustering Day</a>
-<ul>
-<li class="chapter" data-level="" data-path="catch-up-clustering-day.html"><a href="catch-up-clustering-day.html#learning-goals-16"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="catch-up-clustering-day.html"><a href="catch-up-clustering-day.html#real-data-clustering"><i class="fa fa-check"></i>Real Data Clustering</a>
-<ul>
-<li class="chapter" data-level="" data-path="catch-up-clustering-day.html"><a href="catch-up-clustering-day.html#your-goal"><i class="fa fa-check"></i>Your Goal</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="catch-up-clustering-day.html"><a href="catch-up-clustering-day.html#clustering-in-the-wild"><i class="fa fa-check"></i>Clustering in the Wild</a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html"><i class="fa fa-check"></i><b>18</b> Principal Components Analysis</a>
-<ul>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#learning-goals-17"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercises-14"><i class="fa fa-check"></i>Exercises</a>
-<ul>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-1-core-concepts"><i class="fa fa-check"></i>Exercise 1: Core concepts</a></li>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-2-exploring-pc-loadings"><i class="fa fa-check"></i>Exercise 2: Exploring PC loadings</a></li>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-3-exploring-pc-scores"><i class="fa fa-check"></i>Exercise 3: Exploring PC scores</a></li>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-4-scree-plots-and-dimension-reduction"><i class="fa fa-check"></i>Exercise 4: Scree plots and dimension reduction</a></li>
-<li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-5-variable-scaling"><i class="fa fa-check"></i>Exercise 5: Variable scaling</a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>VIII Homework</b></span></li>
+<li class="part"><span><b>V Homework</b></span></li>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html"><i class="fa fa-check"></i>Homework 1</a>
 <ul>
-<li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#project-work-1"><i class="fa fa-check"></i>Project Work</a></li>
+<li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#project-work"><i class="fa fa-check"></i>Project Work</a></li>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#portfolio-work"><i class="fa fa-check"></i>Portfolio Work</a></li>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#reflection"><i class="fa fa-check"></i>Reflection</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html"><i class="fa fa-check"></i>Homework 2</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html#project-work-2"><i class="fa fa-check"></i>Project Work</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html#instructions-1"><i class="fa fa-check"></i>Instructions</a></li>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html#required-analyses"><i class="fa fa-check"></i>Required Analyses</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html#portfolio-work-1"><i class="fa fa-check"></i>Portfolio Work</a></li>
-<li class="chapter" data-level="" data-path="homework-2.html"><a href="homework-2.html#reflection-1"><i class="fa fa-check"></i>Reflection</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-3.html"><a href="homework-3.html"><i class="fa fa-check"></i>Homework 3</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-3.html"><a href="homework-3.html#project-work-3"><i class="fa fa-check"></i>Project Work</a></li>
-<li class="chapter" data-level="" data-path="homework-3.html"><a href="homework-3.html#portfolio-work-2"><i class="fa fa-check"></i>Portfolio Work</a></li>
-<li class="chapter" data-level="" data-path="homework-3.html"><a href="homework-3.html#reflection-2"><i class="fa fa-check"></i>Reflection</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html"><i class="fa fa-check"></i>Homework 4</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#project-work-4"><i class="fa fa-check"></i>Project Work</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#open-communication-about-expectations-and-goals"><i class="fa fa-check"></i>Open Communication about Expectations and Goals</a></li>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#delegation-of-analysis"><i class="fa fa-check"></i>Delegation of Analysis</a></li>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#required-analysis"><i class="fa fa-check"></i>Required Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#portfolio-work-3"><i class="fa fa-check"></i>Portfolio Work</a></li>
-<li class="chapter" data-level="" data-path="homework-4.html"><a href="homework-4.html#reflection-3"><i class="fa fa-check"></i>Reflection</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html"><i class="fa fa-check"></i>Homework 5</a>
-<ul>
-<li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#project-work-5"><i class="fa fa-check"></i>Project Work</a></li>
-<li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#portfolio-work-4"><i class="fa fa-check"></i>Portfolio Work</a></li>
-</ul></li>
-<li class="part"><span><b>IX Project</b></span></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i>Final Project</a>
-<ul>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#requirements"><i class="fa fa-check"></i>Requirements</a></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#expectations"><i class="fa fa-check"></i>Expectations</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
@@ -516,10 +300,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cross-validation" class="section level1" number="4">
-<h1><span class="header-section-number">Topic 4</span> Cross-validation</h1>
-<div id="learning-goals-3" class="section level2 unnumbered">
-<h2>Learning Goals</h2>
+<div id="cross-validation" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Topic4</span> Cross-validation<a href="cross-validation.html#cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-goals-3" class="section level2 unnumbered hasAnchor">
+<h2>Learning Goals<a href="cross-validation.html#learning-goals-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Inform and justify data analysis and modeling process and the resulting conclusions with clear, organized, logical, and compelling details that adapt to the background, values, and motivations of the audience and context in which communication occurs</li>
 <li>Accurately describe all steps of cross-validation to estimate the test/out-of-sample version of a model evaluation metric</li>
@@ -531,8 +315,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Slides from today are available <a href="https://docs.google.com/document/d/1U905_Brwzf_TdhwClUafc6ImQWGiRTVfQC0iH4pwCJo/edit?usp=sharing">here</a>.</p>
 <p><br><br><br></p>
 </div>
-<div id="writing-good-sentences" class="section level2 unnumbered">
-<h2>Writing Good Sentences</h2>
+<div id="writing-good-sentences" class="section level2 unnumbered hasAnchor">
+<h2>Writing Good Sentences<a href="cross-validation.html#writing-good-sentences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>From Chapter 9 of <em>Communicating with Data</em>:</p>
 <blockquote>
 <p>When revising sentences, here are four possible actions you can take:</p>
@@ -549,8 +333,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p><strong>Word choice</strong>. Replace weak nous with concrete ones, passive verbs with active voice, and match the connotation of words with the context of the sentence</p>
 </blockquote>
-<div id="instructions" class="section level3 unnumbered">
-<h3>Instructions</h3>
+<div id="instructions" class="section level3 unnumbered hasAnchor">
+<h3>Instructions<a href="cross-validation.html#instructions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>One person from the group makes a copy of <a href="https://docs.google.com/document/d/1U905_Brwzf_TdhwClUafc6ImQWGiRTVfQC0iH4pwCJo/edit?usp=sharing">this document</a> and then shares that copy with everyone in the group and the instructor.</li>
 <li>Change “editing” (look for the pencil at the top right of document) to “suggesting”</li>
@@ -561,11 +345,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><br><br><br></p>
 </div>
 </div>
-<div id="exercises-2" class="section level2 unnumbered">
-<h2>Exercises</h2>
+<div id="exercises-2" class="section level2 unnumbered hasAnchor">
+<h2>Exercises<a href="cross-validation.html#exercises-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>You can download a template RMarkdown file to start from <a href="template_rmds/04-cv.Rmd">here</a>.</strong></p>
-<div id="context-2" class="section level3 unnumbered">
-<h3>Context</h3>
+<div id="context-2" class="section level3 unnumbered hasAnchor">
+<h3>Context<a href="cross-validation.html#context-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We’ll be working with a dataset containing physical measurements on 80 adult males. These measurements include body fat percentage estimates as well as body circumference measurements.</p>
 <ul>
 <li><code>fatBrozek</code>: Percent body fat using Brozek’s equation: 457/Density - 414.2</li>
@@ -586,70 +370,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>wrist</code>: Wrist circumference (cm)</li>
 </ul>
 <p>It takes a lot of effort to estimate body fat percentage accurately through underwater weighing. The goal is to build the best predictive model for <code>fatSiri</code> using just circumference measurements, which are more easily attainable. (We won’t use <code>fatBrozek</code> or <code>density</code> as predictors because they’re other outcome variables.)</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="cross-validation.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb112-2"><a href="cross-validation.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb112-3"><a href="cross-validation.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb112-4"><a href="cross-validation.html#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb112-5"><a href="cross-validation.html#cb112-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
-<span id="cb112-6"><a href="cross-validation.html#cb112-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb112-7"><a href="cross-validation.html#cb112-7" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/js2gxnazybokbzh/bodyfat_train.csv?dl=1&quot;</span>)</span>
-<span id="cb112-8"><a href="cross-validation.html#cb112-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb112-9"><a href="cross-validation.html#cb112-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the fatBrozek and density variables</span></span>
-<span id="cb112-10"><a href="cross-validation.html#cb112-10" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> bodyfat_train <span class="sc">%&gt;%</span></span>
-<span id="cb112-11"><a href="cross-validation.html#cb112-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>fatBrozek, <span class="sc">-</span>density, <span class="sc">-</span>hipin)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="cross-validation.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb105-2"><a href="cross-validation.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb105-3"><a href="cross-validation.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb105-4"><a href="cross-validation.html#cb105-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb105-5"><a href="cross-validation.html#cb105-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidymodels_prefer</span>()</span>
+<span id="cb105-6"><a href="cross-validation.html#cb105-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-7"><a href="cross-validation.html#cb105-7" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://www.dropbox.com/s/js2gxnazybokbzh/bodyfat_train.csv?dl=1&quot;</span>)</span>
+<span id="cb105-8"><a href="cross-validation.html#cb105-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-9"><a href="cross-validation.html#cb105-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the fatBrozek and density variables</span></span>
+<span id="cb105-10"><a href="cross-validation.html#cb105-10" aria-hidden="true" tabindex="-1"></a>bodyfat_train <span class="ot">&lt;-</span> bodyfat_train <span class="sc">%&gt;%</span></span>
+<span id="cb105-11"><a href="cross-validation.html#cb105-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>fatBrozek, <span class="sc">-</span>density, <span class="sc">-</span>hipin)</span></code></pre></div>
 <p>Consider the 4 models you’ve used before:</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="cross-validation.html#cb113-1" aria-hidden="true" tabindex="-1"></a>lm_spec <span class="ot">&lt;-</span></span>
-<span id="cb113-2"><a href="cross-validation.html#cb113-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb113-3"><a href="cross-validation.html#cb113-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> <span class="st">&#39;lm&#39;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb113-4"><a href="cross-validation.html#cb113-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">&#39;regression&#39;</span>)</span>
-<span id="cb113-5"><a href="cross-validation.html#cb113-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-6"><a href="cross-validation.html#cb113-6" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb113-7"><a href="cross-validation.html#cb113-7" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm, </span>
-<span id="cb113-8"><a href="cross-validation.html#cb113-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb113-9"><a href="cross-validation.html#cb113-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-10"><a href="cross-validation.html#cb113-10" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb113-11"><a href="cross-validation.html#cb113-11" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps, </span>
-<span id="cb113-12"><a href="cross-validation.html#cb113-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb113-13"><a href="cross-validation.html#cb113-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-14"><a href="cross-validation.html#cb113-14" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb113-15"><a href="cross-validation.html#cb113-15" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps<span class="sc">+</span>chest<span class="sc">+</span>hip, </span>
-<span id="cb113-16"><a href="cross-validation.html#cb113-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
-<span id="cb113-17"><a href="cross-validation.html#cb113-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-18"><a href="cross-validation.html#cb113-18" aria-hidden="true" tabindex="-1"></a>mod4 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
-<span id="cb113-19"><a href="cross-validation.html#cb113-19" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> .,  <span class="co"># The . means all predictors</span></span>
-<span id="cb113-20"><a href="cross-validation.html#cb113-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="cross-validation.html#cb106-1" aria-hidden="true" tabindex="-1"></a>lm_spec <span class="ot">&lt;-</span></span>
+<span id="cb106-2"><a href="cross-validation.html#cb106-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb106-3"><a href="cross-validation.html#cb106-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="at">engine =</span> <span class="st">&#39;lm&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb106-4"><a href="cross-validation.html#cb106-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">&#39;regression&#39;</span>)</span>
+<span id="cb106-5"><a href="cross-validation.html#cb106-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-6"><a href="cross-validation.html#cb106-6" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb106-7"><a href="cross-validation.html#cb106-7" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm, </span>
+<span id="cb106-8"><a href="cross-validation.html#cb106-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb106-9"><a href="cross-validation.html#cb106-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-10"><a href="cross-validation.html#cb106-10" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb106-11"><a href="cross-validation.html#cb106-11" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps, </span>
+<span id="cb106-12"><a href="cross-validation.html#cb106-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb106-13"><a href="cross-validation.html#cb106-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-14"><a href="cross-validation.html#cb106-14" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb106-15"><a href="cross-validation.html#cb106-15" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> age<span class="sc">+</span>weight<span class="sc">+</span>neck<span class="sc">+</span>abdomen<span class="sc">+</span>thigh<span class="sc">+</span>forearm<span class="sc">+</span>biceps<span class="sc">+</span>chest<span class="sc">+</span>hip, </span>
+<span id="cb106-16"><a href="cross-validation.html#cb106-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train)</span>
+<span id="cb106-17"><a href="cross-validation.html#cb106-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-18"><a href="cross-validation.html#cb106-18" aria-hidden="true" tabindex="-1"></a>mod4 <span class="ot">&lt;-</span> <span class="fu">fit</span>(lm_spec,</span>
+<span id="cb106-19"><a href="cross-validation.html#cb106-19" aria-hidden="true" tabindex="-1"></a>            fatSiri <span class="sc">~</span> .,  <span class="co"># The . means all predictors</span></span>
+<span id="cb106-20"><a href="cross-validation.html#cb106-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> bodyfat_train) </span></code></pre></div>
 </div>
-<div id="exercise-1-cross-validation-in-concept" class="section level3 unnumbered">
-<h3>Exercise 1: Cross-validation in Concept</h3>
+<div id="exercise-1-cross-validation-in-concept" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 1: Cross-validation in Concept<a href="cross-validation.html#exercise-1-cross-validation-in-concept" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We are going to repeat what we did last week but use cross-validation to help us evaluate models in terms of the predictive performance on “new” data to help us choose a good model.</p>
 <ol style="list-style-type: lower-alpha">
 <li>In pairs or triplets, take turns explaining to each other the steps of cross validation (CV) in concept and then how you might use 10-fold CV with these 80 individual data points.</li>
 </ol>
 </div>
-<div id="exercise-2-cross-validation-with-tidymodels" class="section level3 unnumbered">
-<h3>Exercise 2: Cross-validation with <code>tidymodels</code></h3>
+<div id="exercise-2-cross-validation-with-tidymodels" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 2: Cross-validation with <code>tidymodels</code><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: lower-alpha">
 <li>Complete the code below to perform 10-fold cross-validation for <code>mod1</code> to estimate the test RMSE (<span class="math inline">\(\text{CV}_{(10)}\)</span>). Do we need to use <code>set.seed()</code>? Why or why not? (Is there a number of folds for which we would not need to set the seed?)</li>
 </ol>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="cross-validation.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do we need to use set.seed()?</span></span>
-<span id="cb114-2"><a href="cross-validation.html#cb114-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-3"><a href="cross-validation.html#cb114-3" aria-hidden="true" tabindex="-1"></a>bodyfat_cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(??, <span class="at">v =</span> <span class="dv">10</span>)</span>
-<span id="cb114-4"><a href="cross-validation.html#cb114-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-5"><a href="cross-validation.html#cb114-5" aria-hidden="true" tabindex="-1"></a>model_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb114-6"><a href="cross-validation.html#cb114-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_formula</span>(??) <span class="sc">%&gt;%</span></span>
-<span id="cb114-7"><a href="cross-validation.html#cb114-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(lm_spec)</span>
-<span id="cb114-8"><a href="cross-validation.html#cb114-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-9"><a href="cross-validation.html#cb114-9" aria-hidden="true" tabindex="-1"></a>mod1_cv <span class="ot">&lt;-</span> <span class="fu">fit_resamples</span>(model_wf,</span>
-<span id="cb114-10"><a href="cross-validation.html#cb114-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">resamples =</span> bodyfat_cv, </span>
-<span id="cb114-11"><a href="cross-validation.html#cb114-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">metrics =</span> <span class="fu">metric_set</span>(rmse, rsq, mae)</span>
-<span id="cb114-12"><a href="cross-validation.html#cb114-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="cross-validation.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do we need to use set.seed()?</span></span>
+<span id="cb107-2"><a href="cross-validation.html#cb107-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-3"><a href="cross-validation.html#cb107-3" aria-hidden="true" tabindex="-1"></a>bodyfat_cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(??, <span class="at">v =</span> <span class="dv">10</span>)</span>
+<span id="cb107-4"><a href="cross-validation.html#cb107-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-5"><a href="cross-validation.html#cb107-5" aria-hidden="true" tabindex="-1"></a>model_wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb107-6"><a href="cross-validation.html#cb107-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_formula</span>(??) <span class="sc">%&gt;%</span></span>
+<span id="cb107-7"><a href="cross-validation.html#cb107-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(lm_spec)</span>
+<span id="cb107-8"><a href="cross-validation.html#cb107-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-9"><a href="cross-validation.html#cb107-9" aria-hidden="true" tabindex="-1"></a>mod1_cv <span class="ot">&lt;-</span> <span class="fu">fit_resamples</span>(model_wf,</span>
+<span id="cb107-10"><a href="cross-validation.html#cb107-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">resamples =</span> bodyfat_cv, </span>
+<span id="cb107-11"><a href="cross-validation.html#cb107-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">metrics =</span> <span class="fu">metric_set</span>(rmse, rsq, mae)</span>
+<span id="cb107-12"><a href="cross-validation.html#cb107-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li><p>Look at <code>mod1_cv %&gt;% unnest(.metrics)</code>, and use this to calculate the 10-fold cross-validated RMSE by hand. (Note: We haven’t done this together, but how can you adapt code that we’ve used before?)</p></li>
 <li><p>Check your answer to part c by directly printing out the CV metrics: <code>mod1_cv %&gt;% collect_metrics()</code>. Interpret this metric.</p></li>
 </ol>
 </div>
-<div id="exercise-3-looking-at-the-evaluation-metrics" class="section level3 unnumbered">
-<h3>Exercise 3: Looking at the evaluation metrics</h3>
+<div id="exercise-3-looking-at-the-evaluation-metrics" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 3: Looking at the evaluation metrics<a href="cross-validation.html#exercise-3-looking-at-the-evaluation-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Look at the completed table below of evaluation metrics for the 4 models.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Which model performed the best on the training data?</li>
@@ -688,16 +472,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="exercise-4-practical-issues-choosing-the-number-of-folds" class="section level3 unnumbered">
-<h3>Exercise 4: Practical issues: choosing the number of folds</h3>
+<div id="exercise-4-practical-issues-choosing-the-number-of-folds" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 4: Practical issues: choosing the number of folds<a href="cross-validation.html#exercise-4-practical-issues-choosing-the-number-of-folds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: lower-alpha">
 <li>In terms of sample size, what are the pros/cons of low vs. high number of folds?</li>
 <li>In terms of computational time, what are the pros/cons of low vs. high number of folds?</li>
 <li>If possible, it is advisable to choose the number of folds to be a divisor of the sample size. Why do you think that is?</li>
 </ol>
 </div>
-<div id="digging-deeper" class="section level3 unnumbered">
-<h3>Digging deeper</h3>
+<div id="digging-deeper" class="section level3 unnumbered hasAnchor">
+<h3>Digging deeper<a href="cross-validation.html#digging-deeper" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you have time, consider these exercises to further explore concepts related to today’s ideas.</p>
 <ol style="list-style-type: decimal">
 <li><p>Consider leave-one-out-cross-validation (LOOCV).</p>
@@ -780,7 +564,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
