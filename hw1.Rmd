@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo=TRUE, eval=FALSE)
 # Homework 1 {-}
 
 <center>
-**Due Saturday, September 10th at 9:00 CST on [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=37578)**
+**Due Friday, September 16th at 9:00 CST on [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=37578)**
 
 Please turn in a **single PDF document** containing (1) your responses for the Project Work and Reflection sections and (2) a LINK to the Google Doc with your responses for the Portfolio Work section.
 </center>
