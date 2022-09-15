@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo=TRUE, eval=FALSE)
 # Homework 2 {-}
 
 <center>
-**Due Friday, February 18 at 9:00am CST on [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=36784)**
+**Due Friday, September 29th at 9:00am CST on Moodle**
 </center>
 
 **Deliverables:** Please use [this template](template_rmds/hw2.Rmd) to knit an HTML document. Convert this HTML document to a PDF by opening the HTML document in your web browser. *Print* the document (Ctrl/Cmd-P) and change the destination to "Save as PDF". Submit this one PDF to Moodle.
@@ -178,16 +178,3 @@ e.
 ## Reflection {-}
 
 **Ethics: ** Read the article [Automated background checks are deciding who's fit for a home](https://www.theverge.com/platform/amp/2019/2/1/18205174/automation-background-check-criminal-records-corelogic). Write a short (roughly 250 words), thoughtful response about the ideas that the article brings forth. What themes recur from last week's article (on an old Amazon recruiting tool) or movie (Coded Bias)? What aspects are more particular to the context of equity in housing access?
-
-
-**Reflection:** Write a short, thoughtful reflection about how things went this week. Feel free to use whichever prompts below resonate most with you, but don't feel limited to these prompts.
-
-- How are class-related things going? Is there anything that you need from the instructor? What new strategies for watching videos, reading, reviewing, gaining insights from class work have you tried or would like to try?
-- How is group work going? Did you try out any new collaboration strategies with your new group? How did they go?
-- How is your work/life balance going? Did you try out any new activities or strategies for staying well? How did they go?
-
-
-**Self-Assessment:** Before turning in this assignment on Moodle, go to the individual rubric shared with you and complete the self-assessment for the general skills (top section). After "HW2:", assess yourself on each of the general skills. Do feel like you've grown in a particular area since HW1?
-
-Assessing yourself is hard. We must practice this skill. These "grades" you give yourself are intended to have you stop and think about your learning as you grow and develop the general skills and deepen your understanding of the course topics. These grades do not map directly to a final grade. 
-
