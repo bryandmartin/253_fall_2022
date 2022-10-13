@@ -10,3 +10,6 @@ catch-up-day
 splines
 local-regression-gams
 logistic-regression-evaluation
+lasso-logistic-regression
+trees
+bagging-and-random-forests
