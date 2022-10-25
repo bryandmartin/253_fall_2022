@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 16 Hierarchical Clustering | STAT 253: Statistical Machine Learning</title>
+  <title>Topic16 Hierarchical Clustering | STAT 253: Statistical Machine Learning</title>
   <meta name="description" content="This is the class website for Statistical Machine Learning at Macalester College." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 16 Hierarchical Clustering | STAT 253: Statistical Machine Learning" />
+  <meta property="og:title" content="Topic16 Hierarchical Clustering | STAT 253: Statistical Machine Learning" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   <meta name="github-repo" content="bryandmartin/253_spring_2022" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 16 Hierarchical Clustering | STAT 253: Statistical Machine Learning" />
+  <meta name="twitter:title" content="Topic16 Hierarchical Clustering | STAT 253: Statistical Machine Learning" />
   
   <meta name="twitter:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="k-means-clustering.html"/>
 <link rel="next" href="catch-up-clustering-day.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="overfitting.html"><a href="overfitting.html"><i class="fa fa-check"></i><b>3</b> Overfitting</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#learning-goals-2"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="overfitting.html#the-tidymodels-package">The <code>tidymodels</code> package</a></li>
+<li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#the-tidymodels-package"><i class="fa fa-check"></i>The <code>tidymodels</code> package</a></li>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#exercises-1"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#context-1"><i class="fa fa-check"></i>Context</a></li>
@@ -255,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#context-2"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-1-cross-validation-in-concept"><i class="fa fa-check"></i>Exercise 1: Cross-validation in Concept</a></li>
-<li><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels">Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels"><i class="fa fa-check"></i>Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-3-looking-at-the-evaluation-metrics"><i class="fa fa-check"></i>Exercise 3: Looking at the evaluation metrics</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-4-practical-issues-choosing-the-number-of-folds"><i class="fa fa-check"></i>Exercise 4: Practical issues: choosing the number of folds</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#digging-deeper"><i class="fa fa-check"></i>Digging deeper</a></li>
@@ -278,11 +277,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#learning-goals-5"><i class="fa fa-check"></i>Learning Goals</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#lasso-in-theory"><i class="fa fa-check"></i>LASSO in Theory</a></li>
-<li><a href="lasso-shrinkageregularization.html#lasso-models-in-tidymodels">LASSO models in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#lasso-models-in-tidymodels"><i class="fa fa-check"></i>LASSO models in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercises-4"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-1-a-least-squares-model"><i class="fa fa-check"></i>Exercise 1: A least squares model</a></li>
-<li><a href="lasso-shrinkageregularization.html#exercise-2-fitting-a-lasso-model-in-tidymodels">Exercise 2: Fitting a LASSO model in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-2-fitting-a-lasso-model-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Fitting a LASSO model in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-3-examining-output-plot-of-coefficient-paths"><i class="fa fa-check"></i>Exercise 3: Examining output: plot of coefficient paths</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-4-examining-and-evaluating-the-best-lasso-model"><i class="fa fa-check"></i>Exercise 4: Examining and evaluating the best LASSO model</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#digging-deeper-1"><i class="fa fa-check"></i>Digging deeper</a></li>
@@ -292,13 +291,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html"><i class="fa fa-check"></i><b>7</b> KNN Regression and the Bias-Variance Tradeoff</a>
 <ul>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#learning-goals-6"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#knn-models-in-tidymodels">KNN models in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#knn-models-in-tidymodels"><i class="fa fa-check"></i>KNN models in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercises-5"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#hello-how-are-things"><i class="fa fa-check"></i>Hello, how are things?</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-1-bias-variance-tradeoff-warmup"><i class="fa fa-check"></i>Exercise 1: Bias-variance tradeoff warmup</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-2-impact-of-variable-scale-and-distance-measure"><i class="fa fa-check"></i>Exercise 2: Impact of variable scale and distance measure</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-3-implementing-knn-in-tidymodels">Exercise 3: Implementing KNN in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-3-implementing-knn-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Implementing KNN in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-4-inspecting-the-results"><i class="fa fa-check"></i>Exercise 4: Inspecting the results</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-5-curse-of-dimensionality"><i class="fa fa-check"></i>Exercise 5: Curse of dimensionality</a></li>
 </ul></li>
@@ -314,7 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#learning-goals-8"><i class="fa fa-check"></i>Learning Goals</a></li>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#splines-1"><i class="fa fa-check"></i>Splines</a></li>
-<li><a href="splines.html#splines-in-tidymodels">Splines in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#splines-in-tidymodels"><i class="fa fa-check"></i>Splines in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercises-6"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercise-1-evaluating-a-fully-linear-model"><i class="fa fa-check"></i>Exercise 1: Evaluating a fully linear model</a></li>
@@ -330,13 +329,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-b-splines-ols"><i class="fa fa-check"></i>GAMs (B-splines + OLS)</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-loess"><i class="fa fa-check"></i>GAMs (LOESS)</a></li>
-<li><a href="local-regression-gams.html#gams-smoothing-splines-in-tidymodels">GAMs (smoothing splines) in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-smoothing-splines-in-tidymodels"><i class="fa fa-check"></i>GAMs (smoothing splines) in <code>tidymodels</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercises-7"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-1-conceptual-warmup"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-2-using-loess"><i class="fa fa-check"></i>Exercise 2: Using LOESS</a></li>
-<li><a href="local-regression-gams.html#exercise-3-building-a-gam-in-tidymodels">Exercise 3: Building a GAM in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-3-building-a-gam-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Building a GAM in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-4-adjusting-the-best-gam"><i class="fa fa-check"></i>Exercise 4: Adjusting the “best” GAM</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-5-gam-with-recipes"><i class="fa fa-check"></i>Exercise 5: GAM with recipes</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-6-comparison-of-methods"><i class="fa fa-check"></i>Exercise 6: Comparison of methods</a></li>
@@ -346,12 +345,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html"><i class="fa fa-check"></i><b>11</b> Logistic Regression &amp; Evaluation</a>
 <ul>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#learning-goals-10"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="logistic-regression-evaluation.html#logistic-regression-in-tidymodels">Logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercises-8"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#context-3"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-1-visualization-warmup"><i class="fa fa-check"></i>Exercise 1: Visualization warmup</a></li>
-<li><a href="logistic-regression-evaluation.html#exercise-2-implementing-logistic-regression-in-tidymodels">Exercise 2: Implementing logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-2-implementing-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Implementing logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-3-interpreting-the-model"><i class="fa fa-check"></i>Exercise 3: Interpreting the model</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-4-making-predictions"><i class="fa fa-check"></i>Exercise 4: Making predictions</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-5-evaluate-the-model"><i class="fa fa-check"></i>Exercise 5: Evaluate the model</a></li>
@@ -360,12 +359,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html"><i class="fa fa-check"></i><b>12</b> Lasso &amp; Logistic Regression</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#learning-goals-11"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="lasso-logistic-regression.html#lasso-for-logistic-regression-in-tidymodels">LASSO for logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#lasso-for-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>LASSO for logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercises-9"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#context-4"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-1-conceptual-warmup-1"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
-<li><a href="lasso-logistic-regression.html#exercise-2-implementing-lasso-logistic-regression-in-tidymodels">Exercise 2: Implementing LASSO logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-2-implementing-lasso-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Implementing LASSO logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-3-inspecting-the-model"><i class="fa fa-check"></i>Exercise 3: Inspecting the model</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-4-interpreting-evaluation-metrics"><i class="fa fa-check"></i>Exercise 4: Interpreting evaluation metrics</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-5-using-the-final-model-choosing-a-threshold"><i class="fa fa-check"></i>Exercise 5: Using the final model (choosing a threshold)</a></li>
@@ -375,13 +374,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>13</b> Trees</a>
 <ul>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#learning-goals-12"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="trees.html#trees-in-tidymodels">Trees in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#trees-in-tidymodels"><i class="fa fa-check"></i>Trees in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercises-10"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#context-5"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-1-core-theme-parametricnonparametric"><i class="fa fa-check"></i>Exercise 1: Core theme: parametric/nonparametric</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-2-core-theme-tuning-parameters-and-the-bvt"><i class="fa fa-check"></i>Exercise 2: Core theme: Tuning parameters and the BVT</a></li>
-<li><a href="trees.html#exercise-3-building-tuning-trees-in-tidymodels">Exercise 3: Building &amp; tuning trees in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-3-building-tuning-trees-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Building &amp; tuning trees in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-4-visualizing-trees"><i class="fa fa-check"></i>Exercise 4: Visualizing trees</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-5-predictions-from-trees"><i class="fa fa-check"></i>Exercise 5: Predictions from trees</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-6-variable-importance-in-trees"><i class="fa fa-check"></i>Exercise 6: Variable importance in trees</a></li>
@@ -413,8 +412,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-3-addressing-variable-scale"><i class="fa fa-check"></i>Exercise 3: Addressing variable scale</a></li>
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-4-clustering-on-more-variables"><i class="fa fa-check"></i>Exercise 4: Clustering on more variables</a></li>
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-5-interpreting-the-clusters"><i class="fa fa-check"></i>Exercise 5: Interpreting the clusters</a></li>
-<li><a href="k-means-clustering.html#exercise-6-picking-k">Exercise 6: Picking <span class="math inline">\(k\)</span></a></li>
-<li><a href="k-means-clustering.html#go-deeper-picking-k">Go Deeper: Picking <span class="math inline">\(k\)</span></a></li>
+<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-6-picking-k"><i class="fa fa-check"></i>Exercise 6: Picking <span class="math inline">\(k\)</span></a></li>
+<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#go-deeper-picking-k"><i class="fa fa-check"></i>Go Deeper: Picking <span class="math inline">\(k\)</span></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html"><i class="fa fa-check"></i><b>16</b> Hierarchical Clustering</a>
@@ -451,7 +450,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-5-variable-scaling"><i class="fa fa-check"></i>Exercise 5: Variable scaling</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VIII Homework</b></span></li>
+<li class="part"><span><b>VIII Project</b></span></li>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i>Final Project</a>
+<ul>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#requirements"><i class="fa fa-check"></i>Requirements</a></li>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#expectations"><i class="fa fa-check"></i>Expectations</a></li>
+</ul></li>
+<li class="part"><span><b>IX Homework</b></span></li>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html"><i class="fa fa-check"></i>Homework 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#project-work-1"><i class="fa fa-check"></i>Project Work</a></li>
@@ -490,12 +495,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#project-work-5"><i class="fa fa-check"></i>Project Work</a></li>
 <li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#portfolio-work-4"><i class="fa fa-check"></i>Portfolio Work</a></li>
 </ul></li>
-<li class="part"><span><b>IX Project</b></span></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i>Final Project</a>
-<ul>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#requirements"><i class="fa fa-check"></i>Requirements</a></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#expectations"><i class="fa fa-check"></i>Expectations</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -516,10 +515,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hierarchical-clustering" class="section level1" number="16">
-<h1><span class="header-section-number">Topic 16</span> Hierarchical Clustering</h1>
-<div id="learning-goals-15" class="section level2 unnumbered">
-<h2>Learning Goals</h2>
+<div id="hierarchical-clustering" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">Topic16</span> Hierarchical Clustering<a href="hierarchical-clustering.html#hierarchical-clustering" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-goals-15" class="section level2 unnumbered hasAnchor">
+<h2>Learning Goals<a href="hierarchical-clustering.html#learning-goals-15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Clearly describe / implement by hand the hierarchical clustering algorithm</li>
 <li>Compare and contrast k-means and hierarchical clustering in their outputs and algorithms</li>
@@ -532,38 +531,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Slides from today are available <a href="https://docs.google.com/presentation/d/1P8kxzyavBrQHHMECVDlQfyg15lHZbOz7zdOW-EEhVAc/edit?usp=sharing">here</a>.</p>
 <p><br><br><br></p>
 </div>
-<div id="exercises-13" class="section level2 unnumbered">
-<h2>Exercises</h2>
+<div id="exercises-13" class="section level2 unnumbered hasAnchor">
+<h2>Exercises<a href="hierarchical-clustering.html#exercises-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>You can download a template RMarkdown file to start from <a href="template_rmds/16-hclust.Rmd">here</a>.</strong></p>
 <p>In <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090081">this paper</a>, Gorman et al. study characteristics of penguin populations in the Antarctic. We’ll be looking at a dataset of penguin body measurements available in the <code>palmerpenguins</code> package. (Make sure to install this package before beginning.)</p>
 <p>Our goal in using this data is to better understand the following questions: What similarities are there among the penguins? Do there appear to be different species? If so, how many species are there?</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="hierarchical-clustering.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb222-2"><a href="hierarchical-clustering.html#cb222-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb222-3"><a href="hierarchical-clustering.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb222-4"><a href="hierarchical-clustering.html#cb222-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span>
-<span id="cb222-5"><a href="hierarchical-clustering.html#cb222-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-6"><a href="hierarchical-clustering.html#cb222-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove observations with missing data on key variables</span></span>
-<span id="cb222-7"><a href="hierarchical-clustering.html#cb222-7" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb222-8"><a href="hierarchical-clustering.html#cb222-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_length_mm), <span class="sc">!</span><span class="fu">is.na</span>(bill_depth_mm), <span class="sc">!</span><span class="fu">is.na</span>(flipper_length_mm))</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="hierarchical-clustering.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb215-2"><a href="hierarchical-clustering.html#cb215-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb215-3"><a href="hierarchical-clustering.html#cb215-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb215-4"><a href="hierarchical-clustering.html#cb215-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span>
+<span id="cb215-5"><a href="hierarchical-clustering.html#cb215-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb215-6"><a href="hierarchical-clustering.html#cb215-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove observations with missing data on key variables</span></span>
+<span id="cb215-7"><a href="hierarchical-clustering.html#cb215-7" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb215-8"><a href="hierarchical-clustering.html#cb215-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_length_mm), <span class="sc">!</span><span class="fu">is.na</span>(bill_depth_mm), <span class="sc">!</span><span class="fu">is.na</span>(flipper_length_mm))</span></code></pre></div>
 <p><br></p>
-<div id="exercise-1-hierarchical-clustering-by-hand" class="section level3 unnumbered">
-<h3>Exercise 1: Hierarchical clustering by hand</h3>
+<div id="exercise-1-hierarchical-clustering-by-hand" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 1: Hierarchical clustering by hand<a href="hierarchical-clustering.html#exercise-1-hierarchical-clustering-by-hand" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To practice the hierarchical clustering algorithm, let’s look at a small example. Suppose we collect the following bill depth and length measurements from 5 penguins:</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="hierarchical-clustering.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: these data are already scaled!</span></span>
-<span id="cb223-2"><a href="hierarchical-clustering.html#cb223-2" aria-hidden="true" tabindex="-1"></a>penguins_small <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb223-3"><a href="hierarchical-clustering.html#cb223-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">depth =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">2.7</span>, <span class="fl">3.2</span>, <span class="fl">3.5</span>, <span class="fl">3.6</span>),</span>
-<span id="cb223-4"><a href="hierarchical-clustering.html#cb223-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">length =</span> <span class="fu">c</span>(<span class="fl">5.5</span>, <span class="fl">6.0</span>, <span class="fl">4.5</span>, <span class="fl">5.0</span>, <span class="fl">4.7</span>)</span>
-<span id="cb223-5"><a href="hierarchical-clustering.html#cb223-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb223-6"><a href="hierarchical-clustering.html#cb223-6" aria-hidden="true" tabindex="-1"></a>penguins_small</span>
-<span id="cb223-7"><a href="hierarchical-clustering.html#cb223-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb223-8"><a href="hierarchical-clustering.html#cb223-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins_small, <span class="fu">aes</span>(<span class="at">x =</span> depth, <span class="at">y =</span> length)) <span class="sc">+</span></span>
-<span id="cb223-9"><a href="hierarchical-clustering.html#cb223-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb223-10"><a href="hierarchical-clustering.html#cb223-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">vjust =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
-<span id="cb223-11"><a href="hierarchical-clustering.html#cb223-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="hierarchical-clustering.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: these data are already scaled!</span></span>
+<span id="cb216-2"><a href="hierarchical-clustering.html#cb216-2" aria-hidden="true" tabindex="-1"></a>penguins_small <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb216-3"><a href="hierarchical-clustering.html#cb216-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">depth =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">2.7</span>, <span class="fl">3.2</span>, <span class="fl">3.5</span>, <span class="fl">3.6</span>),</span>
+<span id="cb216-4"><a href="hierarchical-clustering.html#cb216-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">length =</span> <span class="fu">c</span>(<span class="fl">5.5</span>, <span class="fl">6.0</span>, <span class="fl">4.5</span>, <span class="fl">5.0</span>, <span class="fl">4.7</span>)</span>
+<span id="cb216-5"><a href="hierarchical-clustering.html#cb216-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb216-6"><a href="hierarchical-clustering.html#cb216-6" aria-hidden="true" tabindex="-1"></a>penguins_small</span>
+<span id="cb216-7"><a href="hierarchical-clustering.html#cb216-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-8"><a href="hierarchical-clustering.html#cb216-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins_small, <span class="fu">aes</span>(<span class="at">x =</span> depth, <span class="at">y =</span> length)) <span class="sc">+</span></span>
+<span id="cb216-9"><a href="hierarchical-clustering.html#cb216-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb216-10"><a href="hierarchical-clustering.html#cb216-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">vjust =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
+<span id="cb216-11"><a href="hierarchical-clustering.html#cb216-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p>In the exercises below, you’ll draw a dendrogram for these 5 penguins by hand. Sketch the following plotting frame on some scrap paper:</p>
 <p><strong>Step 1: First fusion</strong></p>
 <p>Calculate the distance between each pair of penguins:</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="hierarchical-clustering.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">dist</span>(penguins_small), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="hierarchical-clustering.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">dist</span>(penguins_small), <span class="dv">2</span>)</span></code></pre></div>
 <p>Which pair of penguins 1-5 is most similar? Draw the fusion between this pair of leaves on your plot. Clearly indicate the height (which should be based on the distance) at which you draw this fusion.</p>
 <p><strong>Step 2: Second fusion</strong></p>
 <p>Construct a new distance matrix (fill in the xxxx) reflecting the distances between each pair of branches (where 4 and 5 have now been fused). Use <strong>complete linkage</strong>. That is, the distance between one branch and another is the <em>maximum</em> distance between any pair of leaves in those branches. We can do this by taking the distances from the distance matrix above and using the complete linkage strategy to obtain distances to the 4+5 cluster.</p>
@@ -615,72 +614,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Step 4: Final fusion</strong></p>
 <p>At this point, you should have 2 penguins in one cluster and 3 in another. The final step is to combine these into the tree trunk. Draw this fusion.</p>
 <p><strong>Final step:</strong> Check your work in R:</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="hierarchical-clustering.html#cb225-1" aria-hidden="true" tabindex="-1"></a>penguin_cluster <span class="ot">&lt;-</span> <span class="fu">hclust</span>(<span class="fu">dist</span>(penguins_small), <span class="at">method =</span> <span class="st">&quot;complete&quot;</span>)</span>
-<span id="cb225-2"><a href="hierarchical-clustering.html#cb225-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(penguin_cluster)</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="hierarchical-clustering.html#cb218-1" aria-hidden="true" tabindex="-1"></a>penguin_cluster <span class="ot">&lt;-</span> <span class="fu">hclust</span>(<span class="fu">dist</span>(penguins_small), <span class="at">method =</span> <span class="st">&quot;complete&quot;</span>)</span>
+<span id="cb218-2"><a href="hierarchical-clustering.html#cb218-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(penguin_cluster)</span></code></pre></div>
 </div>
-<div id="exercise-2-exploring-penguin-dendrograms" class="section level3 unnumbered">
-<h3>Exercise 2: Exploring penguin dendrograms</h3>
+<div id="exercise-2-exploring-penguin-dendrograms" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 2: Exploring penguin dendrograms<a href="hierarchical-clustering.html#exercise-2-exploring-penguin-dendrograms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s use hierarchical clustering under different linkage strategies to look at nestings of clusters for the full set of penguins. We’ll continue to cluster based on bill length and depth as well as flipper length. (We’ll use a smaller random subset of 50 penguins for ease of visualization.)</p>
 <ul>
 <li>Remind yourselves about the importance of considering variable scaling by looking at the summary statistics for the 3 variables.</li>
 <li>In looking at the dendrograms under the different linkage types, do you notice any particular features of how the dendrograms look (as mentioned in the video for single and centroid linkage)?</li>
 </ul>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="hierarchical-clustering.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Random subsample of 50 penguins</span></span>
-<span id="cb226-2"><a href="hierarchical-clustering.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">253</span>)</span>
-<span id="cb226-3"><a href="hierarchical-clustering.html#cb226-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb226-4"><a href="hierarchical-clustering.html#cb226-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">50</span>)</span>
-<span id="cb226-5"><a href="hierarchical-clustering.html#cb226-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-6"><a href="hierarchical-clustering.html#cb226-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the variables to be used in clustering</span></span>
-<span id="cb226-7"><a href="hierarchical-clustering.html#cb226-7" aria-hidden="true" tabindex="-1"></a>penguins_sub <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb226-8"><a href="hierarchical-clustering.html#cb226-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(bill_length_mm, bill_depth_mm, flipper_length_mm)</span>
-<span id="cb226-9"><a href="hierarchical-clustering.html#cb226-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-10"><a href="hierarchical-clustering.html#cb226-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics for the variables</span></span>
-<span id="cb226-11"><a href="hierarchical-clustering.html#cb226-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(penguins_sub)</span>
-<span id="cb226-12"><a href="hierarchical-clustering.html#cb226-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-13"><a href="hierarchical-clustering.html#cb226-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute a distance matrix on the scaled data</span></span>
-<span id="cb226-14"><a href="hierarchical-clustering.html#cb226-14" aria-hidden="true" tabindex="-1"></a>dist_mat_scaled <span class="ot">&lt;-</span> <span class="fu">dist</span>(<span class="fu">scale</span>(penguins_sub))</span>
-<span id="cb226-15"><a href="hierarchical-clustering.html#cb226-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-16"><a href="hierarchical-clustering.html#cb226-16" aria-hidden="true" tabindex="-1"></a><span class="co"># The (scaled) distance matrix is the input to hclust()</span></span>
-<span id="cb226-17"><a href="hierarchical-clustering.html#cb226-17" aria-hidden="true" tabindex="-1"></a><span class="co"># The method argument indicates the linkage type</span></span>
-<span id="cb226-18"><a href="hierarchical-clustering.html#cb226-18" aria-hidden="true" tabindex="-1"></a>hc_complete <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;complete&quot;</span>)</span>
-<span id="cb226-19"><a href="hierarchical-clustering.html#cb226-19" aria-hidden="true" tabindex="-1"></a>hc_single <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;single&quot;</span>)</span>
-<span id="cb226-20"><a href="hierarchical-clustering.html#cb226-20" aria-hidden="true" tabindex="-1"></a>hc_average <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;average&quot;</span>)</span>
-<span id="cb226-21"><a href="hierarchical-clustering.html#cb226-21" aria-hidden="true" tabindex="-1"></a>hc_centroid <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;centroid&quot;</span>)</span>
-<span id="cb226-22"><a href="hierarchical-clustering.html#cb226-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-23"><a href="hierarchical-clustering.html#cb226-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot dendrograms</span></span>
-<span id="cb226-24"><a href="hierarchical-clustering.html#cb226-24" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_complete)</span>
-<span id="cb226-25"><a href="hierarchical-clustering.html#cb226-25" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_single)</span>
-<span id="cb226-26"><a href="hierarchical-clustering.html#cb226-26" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_average)</span>
-<span id="cb226-27"><a href="hierarchical-clustering.html#cb226-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_centroid)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="hierarchical-clustering.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Random subsample of 50 penguins</span></span>
+<span id="cb219-2"><a href="hierarchical-clustering.html#cb219-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">253</span>)</span>
+<span id="cb219-3"><a href="hierarchical-clustering.html#cb219-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb219-4"><a href="hierarchical-clustering.html#cb219-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">50</span>)</span>
+<span id="cb219-5"><a href="hierarchical-clustering.html#cb219-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-6"><a href="hierarchical-clustering.html#cb219-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the variables to be used in clustering</span></span>
+<span id="cb219-7"><a href="hierarchical-clustering.html#cb219-7" aria-hidden="true" tabindex="-1"></a>penguins_sub <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb219-8"><a href="hierarchical-clustering.html#cb219-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(bill_length_mm, bill_depth_mm, flipper_length_mm)</span>
+<span id="cb219-9"><a href="hierarchical-clustering.html#cb219-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-10"><a href="hierarchical-clustering.html#cb219-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics for the variables</span></span>
+<span id="cb219-11"><a href="hierarchical-clustering.html#cb219-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(penguins_sub)</span>
+<span id="cb219-12"><a href="hierarchical-clustering.html#cb219-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-13"><a href="hierarchical-clustering.html#cb219-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute a distance matrix on the scaled data</span></span>
+<span id="cb219-14"><a href="hierarchical-clustering.html#cb219-14" aria-hidden="true" tabindex="-1"></a>dist_mat_scaled <span class="ot">&lt;-</span> <span class="fu">dist</span>(<span class="fu">scale</span>(penguins_sub))</span>
+<span id="cb219-15"><a href="hierarchical-clustering.html#cb219-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-16"><a href="hierarchical-clustering.html#cb219-16" aria-hidden="true" tabindex="-1"></a><span class="co"># The (scaled) distance matrix is the input to hclust()</span></span>
+<span id="cb219-17"><a href="hierarchical-clustering.html#cb219-17" aria-hidden="true" tabindex="-1"></a><span class="co"># The method argument indicates the linkage type</span></span>
+<span id="cb219-18"><a href="hierarchical-clustering.html#cb219-18" aria-hidden="true" tabindex="-1"></a>hc_complete <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;complete&quot;</span>)</span>
+<span id="cb219-19"><a href="hierarchical-clustering.html#cb219-19" aria-hidden="true" tabindex="-1"></a>hc_single <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;single&quot;</span>)</span>
+<span id="cb219-20"><a href="hierarchical-clustering.html#cb219-20" aria-hidden="true" tabindex="-1"></a>hc_average <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;average&quot;</span>)</span>
+<span id="cb219-21"><a href="hierarchical-clustering.html#cb219-21" aria-hidden="true" tabindex="-1"></a>hc_centroid <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_mat_scaled, <span class="at">method =</span> <span class="st">&quot;centroid&quot;</span>)</span>
+<span id="cb219-22"><a href="hierarchical-clustering.html#cb219-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-23"><a href="hierarchical-clustering.html#cb219-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot dendrograms</span></span>
+<span id="cb219-24"><a href="hierarchical-clustering.html#cb219-24" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_complete)</span>
+<span id="cb219-25"><a href="hierarchical-clustering.html#cb219-25" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_single)</span>
+<span id="cb219-26"><a href="hierarchical-clustering.html#cb219-26" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_average)</span>
+<span id="cb219-27"><a href="hierarchical-clustering.html#cb219-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_centroid)</span></code></pre></div>
 </div>
-<div id="exercise-3-interpreting-the-clusters-visually" class="section level3 unnumbered">
-<h3>Exercise 3: Interpreting the clusters visually</h3>
+<div id="exercise-3-interpreting-the-clusters-visually" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 3: Interpreting the clusters visually<a href="hierarchical-clustering.html#exercise-3-interpreting-the-clusters-visually" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s continue exploring the dendrogram from complete linkage. The <code>plot()</code> function for <code>hclust()</code> output allows a <code>labels</code> argument which can show custom labels for the leaves (cases). The code below labels the leaves with the species of each penguin.</p>
 <ul>
 <li>What do you notice about the clustering in relation to the actual penguin species?</li>
 <li>Try changing the labels to show the <code>sex</code> of the penguin. What do you notice?</li>
 </ul>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="hierarchical-clustering.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_complete, <span class="at">labels =</span> penguins<span class="sc">$</span>species)</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="hierarchical-clustering.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc_complete, <span class="at">labels =</span> penguins<span class="sc">$</span>species)</span></code></pre></div>
 </div>
-<div id="exercise-4-tree-cutting-and-interpretation" class="section level3 unnumbered">
-<h3>Exercise 4: Tree-cutting and interpretation</h3>
+<div id="exercise-4-tree-cutting-and-interpretation" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 4: Tree-cutting and interpretation<a href="hierarchical-clustering.html#exercise-4-tree-cutting-and-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When we cut a dendrogram at a given height, we indicate that the branches that have fused before (below) that point should be distinct clusters.</p>
 <ul>
 <li><p>For the complete linkage dendrogram, say that we cut the tree at a height of 3? How many clusters should result (eyeball from dendrogram)? How can we interpret this cut in terms of the distances between cases in the resulting clusters?</p></li>
 <li><p>We can add new variables containing cluster assignments with <code>mutate()</code> and <code>cutree()</code>, as below. Using either set of cluster assignments, make some visualizations to explore how variables of interest are related to the cluster assignments.</p></li>
 </ul>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="hierarchical-clustering.html#cb228-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb228-2"><a href="hierarchical-clustering.html#cb228-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb228-3"><a href="hierarchical-clustering.html#cb228-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">hclust_height3 =</span> <span class="fu">factor</span>(<span class="fu">cutree</span>(hc_complete, <span class="at">h =</span> <span class="dv">3</span>)), <span class="co"># Cut at height (h) 3</span></span>
-<span id="cb228-4"><a href="hierarchical-clustering.html#cb228-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">hclust_num6 =</span> <span class="fu">factor</span>(<span class="fu">cutree</span>(hc_complete, <span class="at">k =</span> <span class="dv">6</span>)) <span class="co"># Cut into 6 clusters (k)</span></span>
-<span id="cb228-5"><a href="hierarchical-clustering.html#cb228-5" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="hierarchical-clustering.html#cb221-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb221-2"><a href="hierarchical-clustering.html#cb221-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb221-3"><a href="hierarchical-clustering.html#cb221-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">hclust_height3 =</span> <span class="fu">factor</span>(<span class="fu">cutree</span>(hc_complete, <span class="at">h =</span> <span class="dv">3</span>)), <span class="co"># Cut at height (h) 3</span></span>
+<span id="cb221-4"><a href="hierarchical-clustering.html#cb221-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">hclust_num6 =</span> <span class="fu">factor</span>(<span class="fu">cutree</span>(hc_complete, <span class="at">k =</span> <span class="dv">6</span>)) <span class="co"># Cut into 6 clusters (k)</span></span>
+<span id="cb221-5"><a href="hierarchical-clustering.html#cb221-5" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 </div>
-<div id="exercise-5-k-means-vs.-hierarchical" class="section level3 unnumbered">
-<h3>Exercise 5: K-means vs. hierarchical</h3>
+<div id="exercise-5-k-means-vs.-hierarchical" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 5: K-means vs. hierarchical<a href="hierarchical-clustering.html#exercise-5-k-means-vs.-hierarchical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Brainstorm some pros/cons of hierarchical clustering vs. k-means in terms of their algorithms and the output produced.</p>
 </div>
-<div id="dig-into-dendrograms" class="section level3 unnumbered">
-<h3>Dig into Dendrograms</h3>
+<div id="dig-into-dendrograms" class="section level3 unnumbered hasAnchor">
+<h3>Dig into Dendrograms<a href="hierarchical-clustering.html#dig-into-dendrograms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you are interested in visualizations of hierarchical clustering, there are two interesting R packages:</p>
 <ul>
 <li>dendextend (<a href="https://cran.r-project.org/web/packages/dendextend/vignettes/dendextend.html" class="uri">https://cran.r-project.org/web/packages/dendextend/vignettes/dendextend.html</a>)</li>
@@ -766,7 +765,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

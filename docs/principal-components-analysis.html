@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 18 Principal Components Analysis | STAT 253: Statistical Machine Learning</title>
+  <title>Topic18 Principal Components Analysis | STAT 253: Statistical Machine Learning</title>
   <meta name="description" content="This is the class website for Statistical Machine Learning at Macalester College." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 18 Principal Components Analysis | STAT 253: Statistical Machine Learning" />
+  <meta property="og:title" content="Topic18 Principal Components Analysis | STAT 253: Statistical Machine Learning" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   <meta name="github-repo" content="bryandmartin/253_spring_2022" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 18 Principal Components Analysis | STAT 253: Statistical Machine Learning" />
+  <meta name="twitter:title" content="Topic18 Principal Components Analysis | STAT 253: Statistical Machine Learning" />
   
   <meta name="twitter:description" content="This is the class website for Statistical Machine Learning at Macalester College." />
   
@@ -30,8 +29,7 @@
   
   
 <link rel="prev" href="catch-up-clustering-day.html"/>
-<link rel="next" href="homework-1.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<link rel="next" href="final-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="overfitting.html"><a href="overfitting.html"><i class="fa fa-check"></i><b>3</b> Overfitting</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#learning-goals-2"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="overfitting.html#the-tidymodels-package">The <code>tidymodels</code> package</a></li>
+<li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#the-tidymodels-package"><i class="fa fa-check"></i>The <code>tidymodels</code> package</a></li>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#exercises-1"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="overfitting.html"><a href="overfitting.html#context-1"><i class="fa fa-check"></i>Context</a></li>
@@ -255,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#context-2"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-1-cross-validation-in-concept"><i class="fa fa-check"></i>Exercise 1: Cross-validation in Concept</a></li>
-<li><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels">Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-2-cross-validation-with-tidymodels"><i class="fa fa-check"></i>Exercise 2: Cross-validation with <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-3-looking-at-the-evaluation-metrics"><i class="fa fa-check"></i>Exercise 3: Looking at the evaluation metrics</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#exercise-4-practical-issues-choosing-the-number-of-folds"><i class="fa fa-check"></i>Exercise 4: Practical issues: choosing the number of folds</a></li>
 <li class="chapter" data-level="" data-path="cross-validation.html"><a href="cross-validation.html#digging-deeper"><i class="fa fa-check"></i>Digging deeper</a></li>
@@ -278,11 +277,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#learning-goals-5"><i class="fa fa-check"></i>Learning Goals</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#lasso-in-theory"><i class="fa fa-check"></i>LASSO in Theory</a></li>
-<li><a href="lasso-shrinkageregularization.html#lasso-models-in-tidymodels">LASSO models in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#lasso-models-in-tidymodels"><i class="fa fa-check"></i>LASSO models in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercises-4"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-1-a-least-squares-model"><i class="fa fa-check"></i>Exercise 1: A least squares model</a></li>
-<li><a href="lasso-shrinkageregularization.html#exercise-2-fitting-a-lasso-model-in-tidymodels">Exercise 2: Fitting a LASSO model in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-2-fitting-a-lasso-model-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Fitting a LASSO model in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-3-examining-output-plot-of-coefficient-paths"><i class="fa fa-check"></i>Exercise 3: Examining output: plot of coefficient paths</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#exercise-4-examining-and-evaluating-the-best-lasso-model"><i class="fa fa-check"></i>Exercise 4: Examining and evaluating the best LASSO model</a></li>
 <li class="chapter" data-level="" data-path="lasso-shrinkageregularization.html"><a href="lasso-shrinkageregularization.html#digging-deeper-1"><i class="fa fa-check"></i>Digging deeper</a></li>
@@ -292,13 +291,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html"><i class="fa fa-check"></i><b>7</b> KNN Regression and the Bias-Variance Tradeoff</a>
 <ul>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#learning-goals-6"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#knn-models-in-tidymodels">KNN models in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#knn-models-in-tidymodels"><i class="fa fa-check"></i>KNN models in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercises-5"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#hello-how-are-things"><i class="fa fa-check"></i>Hello, how are things?</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-1-bias-variance-tradeoff-warmup"><i class="fa fa-check"></i>Exercise 1: Bias-variance tradeoff warmup</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-2-impact-of-variable-scale-and-distance-measure"><i class="fa fa-check"></i>Exercise 2: Impact of variable scale and distance measure</a></li>
-<li><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-3-implementing-knn-in-tidymodels">Exercise 3: Implementing KNN in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-3-implementing-knn-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Implementing KNN in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-4-inspecting-the-results"><i class="fa fa-check"></i>Exercise 4: Inspecting the results</a></li>
 <li class="chapter" data-level="" data-path="knn-regression-and-the-bias-variance-tradeoff.html"><a href="knn-regression-and-the-bias-variance-tradeoff.html#exercise-5-curse-of-dimensionality"><i class="fa fa-check"></i>Exercise 5: Curse of dimensionality</a></li>
 </ul></li>
@@ -314,7 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#learning-goals-8"><i class="fa fa-check"></i>Learning Goals</a></li>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#splines-1"><i class="fa fa-check"></i>Splines</a></li>
-<li><a href="splines.html#splines-in-tidymodels">Splines in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#splines-in-tidymodels"><i class="fa fa-check"></i>Splines in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercises-6"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="splines.html"><a href="splines.html#exercise-1-evaluating-a-fully-linear-model"><i class="fa fa-check"></i>Exercise 1: Evaluating a fully linear model</a></li>
@@ -330,13 +329,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-b-splines-ols"><i class="fa fa-check"></i>GAMs (B-splines + OLS)</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-loess"><i class="fa fa-check"></i>GAMs (LOESS)</a></li>
-<li><a href="local-regression-gams.html#gams-smoothing-splines-in-tidymodels">GAMs (smoothing splines) in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#gams-smoothing-splines-in-tidymodels"><i class="fa fa-check"></i>GAMs (smoothing splines) in <code>tidymodels</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercises-7"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-1-conceptual-warmup"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-2-using-loess"><i class="fa fa-check"></i>Exercise 2: Using LOESS</a></li>
-<li><a href="local-regression-gams.html#exercise-3-building-a-gam-in-tidymodels">Exercise 3: Building a GAM in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-3-building-a-gam-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Building a GAM in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-4-adjusting-the-best-gam"><i class="fa fa-check"></i>Exercise 4: Adjusting the “best” GAM</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-5-gam-with-recipes"><i class="fa fa-check"></i>Exercise 5: GAM with recipes</a></li>
 <li class="chapter" data-level="" data-path="local-regression-gams.html"><a href="local-regression-gams.html#exercise-6-comparison-of-methods"><i class="fa fa-check"></i>Exercise 6: Comparison of methods</a></li>
@@ -346,12 +345,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html"><i class="fa fa-check"></i><b>11</b> Logistic Regression &amp; Evaluation</a>
 <ul>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#learning-goals-10"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="logistic-regression-evaluation.html#logistic-regression-in-tidymodels">Logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercises-8"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#context-3"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-1-visualization-warmup"><i class="fa fa-check"></i>Exercise 1: Visualization warmup</a></li>
-<li><a href="logistic-regression-evaluation.html#exercise-2-implementing-logistic-regression-in-tidymodels">Exercise 2: Implementing logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-2-implementing-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Implementing logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-3-interpreting-the-model"><i class="fa fa-check"></i>Exercise 3: Interpreting the model</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-4-making-predictions"><i class="fa fa-check"></i>Exercise 4: Making predictions</a></li>
 <li class="chapter" data-level="" data-path="logistic-regression-evaluation.html"><a href="logistic-regression-evaluation.html#exercise-5-evaluate-the-model"><i class="fa fa-check"></i>Exercise 5: Evaluate the model</a></li>
@@ -360,12 +359,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html"><i class="fa fa-check"></i><b>12</b> Lasso &amp; Logistic Regression</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#learning-goals-11"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="lasso-logistic-regression.html#lasso-for-logistic-regression-in-tidymodels">LASSO for logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#lasso-for-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>LASSO for logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercises-9"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#context-4"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-1-conceptual-warmup-1"><i class="fa fa-check"></i>Exercise 1: Conceptual warmup</a></li>
-<li><a href="lasso-logistic-regression.html#exercise-2-implementing-lasso-logistic-regression-in-tidymodels">Exercise 2: Implementing LASSO logistic regression in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-2-implementing-lasso-logistic-regression-in-tidymodels"><i class="fa fa-check"></i>Exercise 2: Implementing LASSO logistic regression in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-3-inspecting-the-model"><i class="fa fa-check"></i>Exercise 3: Inspecting the model</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-4-interpreting-evaluation-metrics"><i class="fa fa-check"></i>Exercise 4: Interpreting evaluation metrics</a></li>
 <li class="chapter" data-level="" data-path="lasso-logistic-regression.html"><a href="lasso-logistic-regression.html#exercise-5-using-the-final-model-choosing-a-threshold"><i class="fa fa-check"></i>Exercise 5: Using the final model (choosing a threshold)</a></li>
@@ -375,13 +374,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>13</b> Trees</a>
 <ul>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#learning-goals-12"><i class="fa fa-check"></i>Learning Goals</a></li>
-<li><a href="trees.html#trees-in-tidymodels">Trees in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#trees-in-tidymodels"><i class="fa fa-check"></i>Trees in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercises-10"><i class="fa fa-check"></i>Exercises</a>
 <ul>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#context-5"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-1-core-theme-parametricnonparametric"><i class="fa fa-check"></i>Exercise 1: Core theme: parametric/nonparametric</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-2-core-theme-tuning-parameters-and-the-bvt"><i class="fa fa-check"></i>Exercise 2: Core theme: Tuning parameters and the BVT</a></li>
-<li><a href="trees.html#exercise-3-building-tuning-trees-in-tidymodels">Exercise 3: Building &amp; tuning trees in <code>tidymodels</code></a></li>
+<li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-3-building-tuning-trees-in-tidymodels"><i class="fa fa-check"></i>Exercise 3: Building &amp; tuning trees in <code>tidymodels</code></a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-4-visualizing-trees"><i class="fa fa-check"></i>Exercise 4: Visualizing trees</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-5-predictions-from-trees"><i class="fa fa-check"></i>Exercise 5: Predictions from trees</a></li>
 <li class="chapter" data-level="" data-path="trees.html"><a href="trees.html#exercise-6-variable-importance-in-trees"><i class="fa fa-check"></i>Exercise 6: Variable importance in trees</a></li>
@@ -413,8 +412,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-3-addressing-variable-scale"><i class="fa fa-check"></i>Exercise 3: Addressing variable scale</a></li>
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-4-clustering-on-more-variables"><i class="fa fa-check"></i>Exercise 4: Clustering on more variables</a></li>
 <li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-5-interpreting-the-clusters"><i class="fa fa-check"></i>Exercise 5: Interpreting the clusters</a></li>
-<li><a href="k-means-clustering.html#exercise-6-picking-k">Exercise 6: Picking <span class="math inline">\(k\)</span></a></li>
-<li><a href="k-means-clustering.html#go-deeper-picking-k">Go Deeper: Picking <span class="math inline">\(k\)</span></a></li>
+<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#exercise-6-picking-k"><i class="fa fa-check"></i>Exercise 6: Picking <span class="math inline">\(k\)</span></a></li>
+<li class="chapter" data-level="" data-path="k-means-clustering.html"><a href="k-means-clustering.html#go-deeper-picking-k"><i class="fa fa-check"></i>Go Deeper: Picking <span class="math inline">\(k\)</span></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="hierarchical-clustering.html"><a href="hierarchical-clustering.html"><i class="fa fa-check"></i><b>16</b> Hierarchical Clustering</a>
@@ -451,7 +450,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#exercise-5-variable-scaling"><i class="fa fa-check"></i>Exercise 5: Variable scaling</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VIII Homework</b></span></li>
+<li class="part"><span><b>VIII Project</b></span></li>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i>Final Project</a>
+<ul>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#requirements"><i class="fa fa-check"></i>Requirements</a></li>
+<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#expectations"><i class="fa fa-check"></i>Expectations</a></li>
+</ul></li>
+<li class="part"><span><b>IX Homework</b></span></li>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html"><i class="fa fa-check"></i>Homework 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="homework-1.html"><a href="homework-1.html#project-work-1"><i class="fa fa-check"></i>Project Work</a></li>
@@ -490,12 +495,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#project-work-5"><i class="fa fa-check"></i>Project Work</a></li>
 <li class="chapter" data-level="" data-path="homework-5.html"><a href="homework-5.html#portfolio-work-4"><i class="fa fa-check"></i>Portfolio Work</a></li>
 </ul></li>
-<li class="part"><span><b>IX Project</b></span></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i>Final Project</a>
-<ul>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#requirements"><i class="fa fa-check"></i>Requirements</a></li>
-<li class="chapter" data-level="" data-path="final-project.html"><a href="final-project.html#expectations"><i class="fa fa-check"></i>Expectations</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -516,10 +515,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="principal-components-analysis" class="section level1" number="18">
-<h1><span class="header-section-number">Topic 18</span> Principal Components Analysis</h1>
-<div id="learning-goals-17" class="section level2 unnumbered">
-<h2>Learning Goals</h2>
+<div id="principal-components-analysis" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Topic18</span> Principal Components Analysis<a href="principal-components-analysis.html#principal-components-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-goals-17" class="section level2 unnumbered hasAnchor">
+<h2>Learning Goals<a href="principal-components-analysis.html#learning-goals-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Explain the goal of dimension reduction and how this can be useful in a supervised learning setting</li>
 <li>Interpret and use the information provided by principal component loadings and scores</li>
@@ -529,11 +528,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Slides from today are available <a href="https://docs.google.com/presentation/d/1EIWMFg2e-Y6KB2cW70cDTYi-c8sSotUarrCJe9m_Oak/edit?usp=sharing">here</a>.</p>
 <p><br><br><br></p>
 </div>
-<div id="exercises-14" class="section level2 unnumbered">
-<h2>Exercises</h2>
+<div id="exercises-14" class="section level2 unnumbered hasAnchor">
+<h2>Exercises<a href="principal-components-analysis.html#exercises-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>You can download a template RMarkdown file to start from <a href="template_rmds/18-pca.Rmd">here</a>.</strong></p>
-<div id="exercise-1-core-concepts" class="section level3 unnumbered">
-<h3>Exercise 1: Core concepts</h3>
+<div id="exercise-1-core-concepts" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 1: Core concepts<a href="principal-components-analysis.html#exercise-1-core-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For this first exercise, we will work through some key ideas and terminology related to PCA using the information below, which comes from a small data set of 3 variables: <span class="math inline">\(x_1, x_2, x_3\)</span>.</p>
 <p><span class="math display">\[ \text{PC1} = 0.672 x_1 - 0.287 x_2 - 0.683 x_3 \]</span>
 <span class="math display">\[ \text{PC2} = -0.244 x_1 - 0.956 x_2 + 0.162 x_3 \]</span>
@@ -547,25 +546,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><br><br><br></p>
 <p>Now let’s use PCA to explore a gene expression dataset. The <code>Khan</code> dataset in the <code>ISLR</code> package contains gene expression measurements in cancer tissue samples. (Khan is the first author’s last name.) Such data are commonly part of biological studies to better understand the molecular basis for disease. You can find information about this dataset by entering <code>?Khan</code> in the Console.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="principal-components-analysis.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb233-2"><a href="principal-components-analysis.html#cb233-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
-<span id="cb233-3"><a href="principal-components-analysis.html#cb233-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb233-4"><a href="principal-components-analysis.html#cb233-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR)</span>
-<span id="cb233-5"><a href="principal-components-analysis.html#cb233-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Khan)</span>
-<span id="cb233-6"><a href="principal-components-analysis.html#cb233-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb233-7"><a href="principal-components-analysis.html#cb233-7" aria-hidden="true" tabindex="-1"></a><span class="co"># train_data contains 2308 gene expression measurements for 63 samples</span></span>
-<span id="cb233-8"><a href="principal-components-analysis.html#cb233-8" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> Khan <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;xtrain&#39;</span>)</span>
-<span id="cb233-9"><a href="principal-components-analysis.html#cb233-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb233-10"><a href="principal-components-analysis.html#cb233-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename the variables to be gene1, gene2, etc.</span></span>
-<span id="cb233-11"><a href="principal-components-analysis.html#cb233-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(train_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;gene&quot;</span>, <span class="fu">seq_len</span>(<span class="fu">ncol</span>(train_data)))</span>
-<span id="cb233-12"><a href="principal-components-analysis.html#cb233-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb233-13"><a href="principal-components-analysis.html#cb233-13" aria-hidden="true" tabindex="-1"></a><span class="co"># train_labels contains information on which of 4 cancer subtypes each sample comes from</span></span>
-<span id="cb233-14"><a href="principal-components-analysis.html#cb233-14" aria-hidden="true" tabindex="-1"></a>train_labels <span class="ot">&lt;-</span> Khan <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;ytrain&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="principal-components-analysis.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb226-2"><a href="principal-components-analysis.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb226-3"><a href="principal-components-analysis.html#cb226-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb226-4"><a href="principal-components-analysis.html#cb226-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR)</span>
+<span id="cb226-5"><a href="principal-components-analysis.html#cb226-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Khan)</span>
+<span id="cb226-6"><a href="principal-components-analysis.html#cb226-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-7"><a href="principal-components-analysis.html#cb226-7" aria-hidden="true" tabindex="-1"></a><span class="co"># train_data contains 2308 gene expression measurements for 63 samples</span></span>
+<span id="cb226-8"><a href="principal-components-analysis.html#cb226-8" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> Khan <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;xtrain&#39;</span>)</span>
+<span id="cb226-9"><a href="principal-components-analysis.html#cb226-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-10"><a href="principal-components-analysis.html#cb226-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename the variables to be gene1, gene2, etc.</span></span>
+<span id="cb226-11"><a href="principal-components-analysis.html#cb226-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(train_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;gene&quot;</span>, <span class="fu">seq_len</span>(<span class="fu">ncol</span>(train_data)))</span>
+<span id="cb226-12"><a href="principal-components-analysis.html#cb226-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-13"><a href="principal-components-analysis.html#cb226-13" aria-hidden="true" tabindex="-1"></a><span class="co"># train_labels contains information on which of 4 cancer subtypes each sample comes from</span></span>
+<span id="cb226-14"><a href="principal-components-analysis.html#cb226-14" aria-hidden="true" tabindex="-1"></a>train_labels <span class="ot">&lt;-</span> Khan <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;ytrain&#39;</span>)</span></code></pre></div>
 </div>
-<div id="exercise-2-exploring-pc-loadings" class="section level3 unnumbered">
-<h3>Exercise 2: Exploring PC loadings</h3>
+<div id="exercise-2-exploring-pc-loadings" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 2: Exploring PC loadings<a href="principal-components-analysis.html#exercise-2-exploring-pc-loadings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>prcomp()</code> function performs PCA. Look at the help page for the <code>prcomp()</code> function under the “Value” section, and recall that <code>pluck('name')</code> or <code>$</code> extracts named components of objects (e.g., <code>list_object %&gt;% pluck('name_of_component')</code> or <code>list_object$name_of_component</code>).</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="principal-components-analysis.html#cb234-1" aria-hidden="true" tabindex="-1"></a>pca_out <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(train_data, <span class="at">center =</span> <span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="principal-components-analysis.html#cb227-1" aria-hidden="true" tabindex="-1"></a>pca_out <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(train_data, <span class="at">center =</span> <span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <ol style="list-style-type: lower-alpha">
 <li><p>Use the <code>head()</code> function to display the first few rows of the loadings matrix.</p></li>
 <li><p>Using just the first 3 genes, write out the equation for principal component 4.</p></li>
@@ -576,68 +575,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>In R, we can extract the first column of a matrix object <code>mat</code> using <code>mat[,1]</code> or we can convert the matrix to a data frame and use the name of the column <code>mat %&gt;% as.data.frame() %&gt;% select(PC1)</code>. Use the <code>head()</code>, <code>arrange()</code> for data frames or <code>sort()</code> for vectors, and <code>abs()</code> functions to display the 10 most important genes that contribute to the largest source of variation.</li>
 </ol>
 </div>
-<div id="exercise-3-exploring-pc-scores" class="section level3 unnumbered">
-<h3>Exercise 3: Exploring PC scores</h3>
+<div id="exercise-3-exploring-pc-scores" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 3: Exploring PC scores<a href="principal-components-analysis.html#exercise-3-exploring-pc-scores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can plot the PC1 and PC2 scores against each other in a scatterplot to see if these new variables cluster the cases according to some other information. For example, in this data, we have tumor type labels for each case. (4 tumor types)</p>
 <ol style="list-style-type: lower-alpha">
 <li>The <code>x</code> component of <code>pca_out</code> contains these scores. Complete the code below to make a scatterplot of the PC2 scores versus the PC1 scores.</li>
 </ol>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="principal-components-analysis.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Color the points by the information in train_labels (the 4 cancer subtypes present)</span></span>
-<span id="cb235-2"><a href="principal-components-analysis.html#cb235-2" aria-hidden="true" tabindex="-1"></a>pca_out <span class="sc">%&gt;%</span> </span>
-<span id="cb235-3"><a href="principal-components-analysis.html#cb235-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pluck</span>(<span class="st">&#39;x&#39;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb235-4"><a href="principal-components-analysis.html#cb235-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb235-5"><a href="principal-components-analysis.html#cb235-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">labels =</span> train_labels) <span class="sc">%&gt;%</span></span>
-<span id="cb235-6"><a href="principal-components-analysis.html#cb235-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ??, <span class="at">y =</span> ??, <span class="at">color =</span> <span class="fu">factor</span>(??))) <span class="sc">+</span> </span>
-<span id="cb235-7"><a href="principal-components-analysis.html#cb235-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb235-8"><a href="principal-components-analysis.html#cb235-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;PC1&#39;</span>, <span class="at">y =</span> <span class="st">&#39;PC2&#39;</span>) <span class="sc">+</span></span>
-<span id="cb235-9"><a href="principal-components-analysis.html#cb235-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb235-10"><a href="principal-components-analysis.html#cb235-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="principal-components-analysis.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Color the points by the information in train_labels (the 4 cancer subtypes present)</span></span>
+<span id="cb228-2"><a href="principal-components-analysis.html#cb228-2" aria-hidden="true" tabindex="-1"></a>pca_out <span class="sc">%&gt;%</span> </span>
+<span id="cb228-3"><a href="principal-components-analysis.html#cb228-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pluck</span>(<span class="st">&#39;x&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb228-4"><a href="principal-components-analysis.html#cb228-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb228-5"><a href="principal-components-analysis.html#cb228-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">labels =</span> train_labels) <span class="sc">%&gt;%</span></span>
+<span id="cb228-6"><a href="principal-components-analysis.html#cb228-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ??, <span class="at">y =</span> ??, <span class="at">color =</span> <span class="fu">factor</span>(??))) <span class="sc">+</span> </span>
+<span id="cb228-7"><a href="principal-components-analysis.html#cb228-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb228-8"><a href="principal-components-analysis.html#cb228-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;PC1&#39;</span>, <span class="at">y =</span> <span class="st">&#39;PC2&#39;</span>) <span class="sc">+</span></span>
+<span id="cb228-9"><a href="principal-components-analysis.html#cb228-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb228-10"><a href="principal-components-analysis.html#cb228-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Do you notice any clustering by tumor type?</li>
 <li>How could we use k-means and hierarchical clustering to see whether the cases (tissue samples) cluster by tumor type?</li>
 <li>How can we use loadings and the information in the score plot to understand what genes drive groupings of the tissue samples?</li>
 </ol>
 </div>
-<div id="exercise-4-scree-plots-and-dimension-reduction" class="section level3 unnumbered">
-<h3>Exercise 4: Scree plots and dimension reduction</h3>
+<div id="exercise-4-scree-plots-and-dimension-reduction" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 4: Scree plots and dimension reduction<a href="principal-components-analysis.html#exercise-4-scree-plots-and-dimension-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s explore how to use PCA for dimension reduction.</p>
 <ol style="list-style-type: lower-alpha">
 <li>The <code>sdev</code> component of <code>pca_out</code> gives the standard deviation explained by each principal component. Explain what the first 2 lines of code below are doing.</li>
 </ol>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="principal-components-analysis.html#cb236-1" aria-hidden="true" tabindex="-1"></a>var_explained <span class="ot">&lt;-</span> (pca_out <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;sdev&#39;</span>))<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb236-2"><a href="principal-components-analysis.html#cb236-2" aria-hidden="true" tabindex="-1"></a>pve <span class="ot">&lt;-</span> var_explained<span class="sc">/</span><span class="fu">sum</span>(var_explained)</span>
-<span id="cb236-3"><a href="principal-components-analysis.html#cb236-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb236-4"><a href="principal-components-analysis.html#cb236-4" aria-hidden="true" tabindex="-1"></a>var_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb236-5"><a href="principal-components-analysis.html#cb236-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">PC =</span> <span class="fu">seq_len</span>(<span class="fu">length</span>(var_explained)),</span>
-<span id="cb236-6"><a href="principal-components-analysis.html#cb236-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">var_explained =</span> var_explained,</span>
-<span id="cb236-7"><a href="principal-components-analysis.html#cb236-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">pve =</span> pve</span>
-<span id="cb236-8"><a href="principal-components-analysis.html#cb236-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb236-9"><a href="principal-components-analysis.html#cb236-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb236-10"><a href="principal-components-analysis.html#cb236-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct scree plots</span></span>
-<span id="cb236-11"><a href="principal-components-analysis.html#cb236-11" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> var_data <span class="sc">%&gt;%</span></span>
-<span id="cb236-12"><a href="principal-components-analysis.html#cb236-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC, <span class="at">y =</span> pve)) <span class="sc">+</span></span>
-<span id="cb236-13"><a href="principal-components-analysis.html#cb236-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb236-14"><a href="principal-components-analysis.html#cb236-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb236-15"><a href="principal-components-analysis.html#cb236-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Principal Component&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Proportion of varinace explained&#39;</span>) <span class="sc">+</span></span>
-<span id="cb236-16"><a href="principal-components-analysis.html#cb236-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span>
-<span id="cb236-17"><a href="principal-components-analysis.html#cb236-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb236-18"><a href="principal-components-analysis.html#cb236-18" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> var_data <span class="sc">%&gt;%</span></span>
-<span id="cb236-19"><a href="principal-components-analysis.html#cb236-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC, <span class="at">y =</span> <span class="fu">cumsum</span>(pve))) <span class="sc">+</span></span>
-<span id="cb236-20"><a href="principal-components-analysis.html#cb236-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb236-21"><a href="principal-components-analysis.html#cb236-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb236-22"><a href="principal-components-analysis.html#cb236-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Principal Component&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Cumulative proportion of variance explained&#39;</span>) <span class="sc">+</span></span>
-<span id="cb236-23"><a href="principal-components-analysis.html#cb236-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span>
-<span id="cb236-24"><a href="principal-components-analysis.html#cb236-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb236-25"><a href="principal-components-analysis.html#cb236-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr) </span>
-<span id="cb236-26"><a href="principal-components-analysis.html#cb236-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggarrange</span>(p1, p2)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="principal-components-analysis.html#cb229-1" aria-hidden="true" tabindex="-1"></a>var_explained <span class="ot">&lt;-</span> (pca_out <span class="sc">%&gt;%</span> <span class="fu">pluck</span>(<span class="st">&#39;sdev&#39;</span>))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb229-2"><a href="principal-components-analysis.html#cb229-2" aria-hidden="true" tabindex="-1"></a>pve <span class="ot">&lt;-</span> var_explained<span class="sc">/</span><span class="fu">sum</span>(var_explained)</span>
+<span id="cb229-3"><a href="principal-components-analysis.html#cb229-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb229-4"><a href="principal-components-analysis.html#cb229-4" aria-hidden="true" tabindex="-1"></a>var_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb229-5"><a href="principal-components-analysis.html#cb229-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">PC =</span> <span class="fu">seq_len</span>(<span class="fu">length</span>(var_explained)),</span>
+<span id="cb229-6"><a href="principal-components-analysis.html#cb229-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">var_explained =</span> var_explained,</span>
+<span id="cb229-7"><a href="principal-components-analysis.html#cb229-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">pve =</span> pve</span>
+<span id="cb229-8"><a href="principal-components-analysis.html#cb229-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb229-9"><a href="principal-components-analysis.html#cb229-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb229-10"><a href="principal-components-analysis.html#cb229-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct scree plots</span></span>
+<span id="cb229-11"><a href="principal-components-analysis.html#cb229-11" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> var_data <span class="sc">%&gt;%</span></span>
+<span id="cb229-12"><a href="principal-components-analysis.html#cb229-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC, <span class="at">y =</span> pve)) <span class="sc">+</span></span>
+<span id="cb229-13"><a href="principal-components-analysis.html#cb229-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb229-14"><a href="principal-components-analysis.html#cb229-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb229-15"><a href="principal-components-analysis.html#cb229-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Principal Component&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Proportion of varinace explained&#39;</span>) <span class="sc">+</span></span>
+<span id="cb229-16"><a href="principal-components-analysis.html#cb229-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span>
+<span id="cb229-17"><a href="principal-components-analysis.html#cb229-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb229-18"><a href="principal-components-analysis.html#cb229-18" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> var_data <span class="sc">%&gt;%</span></span>
+<span id="cb229-19"><a href="principal-components-analysis.html#cb229-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC, <span class="at">y =</span> <span class="fu">cumsum</span>(pve))) <span class="sc">+</span></span>
+<span id="cb229-20"><a href="principal-components-analysis.html#cb229-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb229-21"><a href="principal-components-analysis.html#cb229-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb229-22"><a href="principal-components-analysis.html#cb229-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Principal Component&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Cumulative proportion of variance explained&#39;</span>) <span class="sc">+</span></span>
+<span id="cb229-23"><a href="principal-components-analysis.html#cb229-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span>
+<span id="cb229-24"><a href="principal-components-analysis.html#cb229-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb229-25"><a href="principal-components-analysis.html#cb229-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr) </span>
+<span id="cb229-26"><a href="principal-components-analysis.html#cb229-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggarrange</span>(p1, p2)</span></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Explain why the plots above look the way they do. (These plots are called <strong>scree plots</strong>.)</li>
 <li>We can think of principal components as new variables. PCA allows us to perform dimension reduction to use a smaller set of variables, often to accompany supervised learning. How can we use the plots above to guide a choice about the number of PCs to use?</li>
 <li>Carefully describe how we could also use cross-validation to pick the number of PCs. (For concreteness, suppose that we’re in a linear regression setting.)</li>
 </ol>
 </div>
-<div id="exercise-5-variable-scaling" class="section level3 unnumbered">
-<h3>Exercise 5: Variable scaling</h3>
+<div id="exercise-5-variable-scaling" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 5: Variable scaling<a href="principal-components-analysis.html#exercise-5-variable-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You likely noticed the <code>scale = TRUE</code> within <code>prcomp()</code> above. This scales the variables to all have unit variance. Explain why this is often advisable by thinking generally about the ranges of different variables. In what other methods would scaling be important?</p>
 
 </div>
@@ -652,7 +651,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="catch-up-clustering-day.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="homework-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="final-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -712,7 +711,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

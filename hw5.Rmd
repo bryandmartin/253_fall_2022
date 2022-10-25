@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo=TRUE, eval=FALSE)
 # Homework 5 {-}
 
 <center>
-**Due Friday, April 22 at 9:00AM CST on Moodle**
+**Due Monday, November 21 at 9:00AM CST on Moodle**
 </center>
 
 **Deliverables:** Each person should submit a PDF containing your responses for Reflections and if your team wants feedback, one group member should submit the separate project work for the team. 

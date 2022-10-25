@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo=TRUE, eval=TRUE)
 # Homework 4 {-}
 
 <center>
-**Due Date: Friday, April 8th at 9:00 AM CST**
+**Due Date: Saturday, November 5th at 9:00 AM CST**
 </center>
 
 **Deliverables:** Submit a single PDF containing your responses for Reflections and one group member submit the project work for the team. 
@@ -140,4 +140,5 @@ Keep in mind that the final project will require you to complete the pieces belo
 
 **Ethics:** Read the article [How to Support your Data Interpretations](https://weallcount.com/2020/10/24/how-to-support-your-data-interpretations/). Write a short (roughly 250 words), thoughtful response about the ideas that the article brings forth. Which pillar(s) do you think is/are hardest to do well for groups that rely on data analytics, and why?
 
+Put this section in your portfolio with all the other ethics reflections.
 
